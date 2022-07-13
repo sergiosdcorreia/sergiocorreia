@@ -1,12 +1,14 @@
 <template>
-  <MainNav />
-  <h1 class="mt-6 text-4xl text-center">Sergio Correia</h1>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/blog">Blog</router-link> |
+    <router-link to="/about">About</router-link>
+  </nav>
+  <router-view />
 </template>
 
 <script>
-import MainNav from "@/components/MainNav.vue";
 export default {
   name: "App",
-  components: { MainNav },
 };
 </script>
