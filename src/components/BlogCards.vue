@@ -1,13 +1,16 @@
 <template>
   <div>
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.description }}</p>
+    <p>These are Blog Cards!</p>
+    <div>
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.description }}</p>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "BlogPost",
+  name: "BlogCards",
   props: {
     post: {
       type: Array,
