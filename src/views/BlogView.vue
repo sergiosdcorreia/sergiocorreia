@@ -1,8 +1,8 @@
 <template>
   <h1>This is the Blog page</h1>
-  <BlogPost :post="post" v-for="(post, index) in blogPosts" :key="index" />
+  <BlogPost v-for="(post, index) in blogPosts" :key="index" :post="post" />
   <h3>View More Recent Blogs</h3>
-  <BlogCards :post="post" v-for="{ post, index } in blogPosts" :key="index" />
+  <BlogCards v-for="{ post, index } in blogPosts" :key="index" :post="post" />
 </template>
 
 <script>
