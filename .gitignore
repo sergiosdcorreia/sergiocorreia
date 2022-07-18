@@ -22,7 +22,3 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-coverage/clover.xml
-coverage/coverage-final.json
-coverage/lcov-report/index.html
-coverage/lcov.info
