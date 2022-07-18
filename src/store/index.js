@@ -1,10 +1,20 @@
 import { createStore } from "vuex";
 
-const store = createStore({
-  state() {
-    return {};
+export const state = () => {
+  return {
+    isLoggedIn: false,
+  };
+};
+
+export const mutations = {
+  LOGIN_USER(state) {
+    state.isLoggedIn = true;
   },
-  mutations: {},
+};
+
+const store = createStore({
+  state,
+  mutations,
   strict: process.env.NODE_ENV !== "production",
 });
 
