@@ -4,10 +4,11 @@
       <router-link :to="{ name: 'home' }">Sergio Correia</router-link> |
     </div>
     <router-link :to="{ name: 'blog' }">Blog</router-link> |
-    <div v-if="isloggedIn">
+    <div v-if="isLoggedIn">
       <router-link :to="{ name: 'createblog' }">Create Blog</router-link>
     </div>
     <router-link :to="{ name: 'about' }">About</router-link>
+    <button @click="loginUser">Sign In</button>
   </nav>
 </template>
 
@@ -15,9 +16,17 @@
 export default {
   name: "MainNav",
   data() {
-    return {
-      isLoggedIn: false,
-    };
+    return {};
+  },
+  computed: {
+    isLoggedIn() {
+      return this.$store.state.isLoggedIn;
+    },
+  },
+  methods: {
+    loginUser() {
+      this.$store.commit("LOGIN_USER");
+    },
   },
 };
 </script>
