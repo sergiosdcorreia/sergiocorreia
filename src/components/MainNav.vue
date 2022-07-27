@@ -7,21 +7,27 @@
     >
       <font-awesome-icon icon="fa-solid fa-angles-left" />
     </span>
+    <span v-if="collapsed"> SC </span>
+    <span v-else> Sergio Correia </span>
+
+    <MainNavLink :to="{ name: 'home' }" icon="fa-solid fa-rss"
+      >Projects</MainNavLink
+    >
     <MainNavLink :to="{ name: 'blog' }" icon="fa-solid fa-rss"
       >Blog</MainNavLink
     >
-    <div>
-      <router-link :to="{ name: 'home' }">Sergio Correia</router-link> |
-    </div>
-    <router-link :to="{ name: 'blog' }">Blog</router-link>
-    <font-awesome-icon icon="fa-solid fa-rss" /> |
+    <MainNavLink :to="{ name: 'about' }" icon="fa-solid fa-info"
+      >About</MainNavLink
+    >
     <div v-if="isLoggedIn">
       <router-link :to="{ name: 'createblog' }">Create Blog</router-link>
     </div>
-    <router-link :to="{ name: 'about' }">About</router-link>
-    <font-awesome-icon icon="fa-solid fa-info" />
-    <button @click="loginUser">Sign In</button
-    ><font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" />
+    <button v-if="collapsed">
+      <font-awesome-icon icon="fa-solid fa-rss" />
+    </button>
+    <button v-else @click="loginUser">
+      <font-awesome-icon icon="fa-solid fa-rss" /> Sign In
+    </button>
   </nav>
 </template>
 
