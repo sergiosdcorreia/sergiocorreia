@@ -1,16 +1,21 @@
 <template>
   <MainNav v-if="hasNavigation" />
-  <router-view />
+  <div class="container" :style="{ marginLeft: sidebarWidth }">
+    <router-view />
+  </div>
 </template>
 
 <script>
 import MainNav from "@/components/MainNav.vue";
+import { sidebarWidth } from "@/composables/state";
+
 export default {
   name: "App",
   components: { MainNav },
   data() {
     return {
       hasNavigation: null,
+      sidebarWidth,
     };
   },
   watch: {
@@ -36,3 +41,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.container {
+  transition: 0.3s ease;
+}
+</style>
