@@ -10,8 +10,11 @@
     <span v-if="collapsed"> SC </span>
     <span v-else> Sergio Correia </span>
 
-    <MainNavLink :to="{ name: 'home' }" icon="fa-solid fa-rss"
+    <MainNavLink :to="{ name: 'home' }" icon="fa-solid fa-pen-ruler"
       >Projects</MainNavLink
+    >
+    <MainNavLink :to="{ name: 'photogallery' }" icon="fa-solid fa-camera"
+      >Photo Gallery</MainNavLink
     >
     <MainNavLink :to="{ name: 'blog' }" icon="fa-solid fa-rss"
       >Blog</MainNavLink
@@ -23,10 +26,10 @@
       <router-link :to="{ name: 'createblog' }">Create Blog</router-link>
     </div>
     <button v-if="collapsed">
-      <font-awesome-icon icon="fa-solid fa-rss" />
+      <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" />
     </button>
     <button v-else @click="loginUser">
-      <font-awesome-icon icon="fa-solid fa-rss" /> Sign In
+      <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" /> Sign In
     </button>
   </nav>
 </template>

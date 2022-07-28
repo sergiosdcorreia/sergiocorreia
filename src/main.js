@@ -6,13 +6,22 @@ import store from "./store";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
-  faAnglesRight,
+  faPenRuler,
   faRss,
   faInfo,
+  faArrowRightToBracket,
   faAngleDoubleLeft,
+  faCamera,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faAnglesRight, faRss, faInfo, faAngleDoubleLeft);
+library.add(
+  faPenRuler,
+  faCamera,
+  faRss,
+  faInfo,
+  faArrowRightToBracket,
+  faAngleDoubleLeft
+);
 createApp(App)
   .component("font-awesome-icon", FontAwesomeIcon)
   .use(store)

@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import HomeView from "@/views/HomeView.vue";
 import CreateBlog from "@/views/CreateBlog.vue";
+import PhotoGallery from "@/views/PhotoGallery.vue";
 import BlogView from "@/views/BlogView.vue";
 import Login from "@/views/Login.vue";
 import Register from "@/views/Register.vue";
@@ -29,6 +30,14 @@ const routes = [
     component: CreateBlog,
     meta: {
       title: "Create Blog",
+    },
+  },
+  {
+    path: "/photo-gallery",
+    name: "photogallery",
+    component: PhotoGallery,
+    meta: {
+      title: "Photo Gallery",
     },
   },
   {
