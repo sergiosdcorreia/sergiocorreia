@@ -23,7 +23,7 @@
       >About</MainNavLink
     >
     <div v-if="isLoggedIn">
-      <router-link :to="{ name: 'createblog' }">Create Blog</router-link>
+      <router-link :to="{ name: 'createpost' }">Create Post</router-link>
     </div>
     <button v-if="collapsed">
       <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" />
