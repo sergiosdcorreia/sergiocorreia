@@ -4,7 +4,7 @@ import CreatePost from "@/views/CreatePost.vue";
 import PhotoGallery from "@/views/PhotoGallery.vue";
 import BlogView from "@/views/BlogView.vue";
 import Login from "@/views/Login.vue";
-import Register from "@/views/Register.vue";
+import RegisterUser from "@/views/RegisterUser.vue";
 import ForgotPassword from "@/views/ForgotPassword.vue";
 
 const routes = [
@@ -51,7 +51,7 @@ const routes = [
   {
     path: "/register",
     name: "register",
-    component: Register,
+    component: RegisterUser,
     meta: {
       title: "Register",
     },

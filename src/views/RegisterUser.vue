@@ -23,22 +23,42 @@
           <input v-model="password" type="password" placeholder="Password" />
         </div>
       </div>
-      <button>Sign Up</button>
+      <div class="error">
+        <p>{{ error }}</p>
+      </div>
+      <button @click="register">Sign Up</button>
+      <button @click="signInWithGoogle">Sign In with Google</button>
     </form>
   </div>
 </template>
 
+<script setup>
+import { ref } from "vue";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from "vue-router";
+
+const firstName = ref("");
+const lastName = ref("");
+const userName = ref("");
+const email = ref("");
+const password = ref("");
+const error = ref("");
+const router = useRouter();
+const register = () => {
+  createUserWithEmailAndPassword(getAuth(), email.value, password.value)
+    .then(() => {
+      console.log("Successfully registered!");
+      router.push({ name: "blog" });
+    })
+    .catch((error) => {
+      console.log(error.code);
+      alert(error.message);
+    });
+};
+const signInWithGoogle = () => {};
+</script>
 <script>
 export default {
   name: "RegisterUser",
-  data() {
-    return {
-      firstName: "null",
-      lastName: "null",
-      userName: "null",
-      email: "null",
-      password: "null",
-    };
-  },
 };
 </script>
