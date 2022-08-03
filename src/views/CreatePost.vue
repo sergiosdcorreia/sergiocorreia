@@ -32,7 +32,7 @@
           </button>
           <span>File Chosen: {{ $store.state.blogPhotoName }}</span>
         </div>
-        <button>Submit Post</button>
+        <button @click="submitPost">Submit Post</button>
       </div>
     </div>
   </div>
@@ -50,6 +50,32 @@ export default {
       postContent: "",
       postPhoto: "",
     };
+  },
+  methods: {
+    submitPost() {
+      if (
+        this.postTitle.length !== 0 &&
+        this.postDescription.length !== 0 &&
+        this.postContent.length !== 0
+      ) {
+        if (this.postPhoto) {
+          console.log("Photo posted successfully!");
+        }
+        this.error = true;
+        this.errorMsg = "Please ensure you uploaded a photo.";
+        setTimeout(() => {
+          this.error = false;
+        }, 5000);
+        return;
+      }
+      this.error = true;
+      this.errorMsg =
+        "Please ensure Post Title, Description and some content have been filled.";
+      setTimeout(() => {
+        this.error = false;
+      }, 5000);
+      return;
+    },
   },
 };
 </script>
