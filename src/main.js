@@ -13,6 +13,7 @@ import {
   faArrowRightToBracket,
   faAngleDoubleLeft,
   faCamera,
+  faPenToSquare,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -21,7 +22,8 @@ library.add(
   faRss,
   faInfo,
   faArrowRightToBracket,
-  faAngleDoubleLeft
+  faAngleDoubleLeft,
+  faPenToSquare
 );
 
 const firebaseConfig = {

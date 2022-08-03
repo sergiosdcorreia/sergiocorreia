@@ -16,14 +16,18 @@
     <MainNavLink :to="{ name: 'photogallery' }" icon="fa-solid fa-camera"
       >Photo Gallery</MainNavLink
     >
-    <MainNavLink :to="{ name: 'blog' }" icon="fa-solid fa-rss"
-      >Blog</MainNavLink
-    >
+    <div v-if="isLoggedIn">
+      <MainNavLink :to="{ name: 'blog' }" icon="fa-solid fa-rss"
+        >Blog</MainNavLink
+      >
+    </div>
     <MainNavLink :to="{ name: 'about' }" icon="fa-solid fa-info"
       >About</MainNavLink
     >
     <div v-if="isLoggedIn">
-      <router-link :to="{ name: 'createpost' }">Create Post</router-link>
+      <MainNavLink :to="{ name: 'createpost' }" icon="fa-solid fa-pen-to-square"
+        >Create Post</MainNavLink
+      >
     </div>
     <button v-if="collapsed">
       <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" />
@@ -31,6 +35,11 @@
     <button v-else @click="loginUser">
       <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" /> Sign In
     </button>
+    <MainNavLink
+      :to="{ name: 'login' }"
+      icon="fa-solid fa-arrow-right-to-bracket"
+      >Sign In</MainNavLink
+    >
   </nav>
 </template>
 
