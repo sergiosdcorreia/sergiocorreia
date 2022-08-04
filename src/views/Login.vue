@@ -17,18 +17,32 @@
       <router-link :to="{ name: 'forgotpassword' }"
         >Forgot your password?</router-link
       >
-      <button>Sign In</button>
+      <button @click="loginUser">Sign In</button>
     </form>
   </div>
 </template>
 
 <script>
+import { ref } from "vue";
+import { useStore } from "vuex";
+import { useRouter } from "vue-router";
+
 export default {
   name: "LogIn",
-  data() {
+  setup() {
+    const email = ref("");
+    const password = ref("");
+    const store = useStore();
+    const router = useRouter();
+
+    const loginUser = () => {
+      store.commit("LOGIN_USER");
+      router.push({ name: "home" });
+    };
     return {
-      email: null,
-      password: null,
+      email,
+      password,
+      loginUser,
     };
   },
 };

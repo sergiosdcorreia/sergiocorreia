@@ -10,6 +10,9 @@ export const mutations = {
   LOGIN_USER(state) {
     state.isLoggedIn = true;
   },
+  LOGOUT_USER(state) {
+    state.isLoggedIn = false;
+  },
 };
 
 const store = createStore({

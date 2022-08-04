@@ -28,40 +28,45 @@
       <MainNavLink :to="{ name: 'createpost' }" icon="fa-solid fa-pen-to-square"
         >Create Post</MainNavLink
       >
+      <button @click="logOutUser">
+        <font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" /> Log
+        Out
+      </button>
+    </div>
+    <div v-if="!isLoggedIn">
+      <MainNavLink
+        :to="{ name: 'login' }"
+        icon="fa-solid fa-arrow-right-to-bracket"
+        >Sign In</MainNavLink
+      >
     </div>
     <button v-if="collapsed">
       <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" />
     </button>
-    <button v-else @click="loginUser">
-      <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" /> Sign In
-    </button>
-    <MainNavLink
-      :to="{ name: 'login' }"
-      icon="fa-solid fa-arrow-right-to-bracket"
-      >Sign In</MainNavLink
-    >
   </nav>
 </template>
 
 <script>
 import MainNavLink from "@/components/MainNavLink.vue";
 import { collapsed, toggleSidebar, sidebarWidth } from "@/composables/state";
+import { computed } from "vue";
+import { useStore } from "vuex";
+import { useRouter } from "vue-router";
 
 export default {
   name: "MainNav",
   components: { MainNavLink },
   setup() {
-    return { collapsed, toggleSidebar, sidebarWidth };
-  },
-  computed: {
-    isLoggedIn() {
-      return this.$store.state.isLoggedIn;
-    },
-  },
-  methods: {
-    loginUser() {
-      this.$store.commit("LOGIN_USER");
-    },
+    const store = useStore();
+    const router = useRouter();
+    const isLoggedIn = computed(() => {
+      return store.state.isLoggedIn;
+    });
+    const logOutUser = () => {
+      store.commit("LOGOUT_USER");
+      router.push({ name: "login" });
+    };
+    return { collapsed, toggleSidebar, sidebarWidth, isLoggedIn, logOutUser };
   },
 };
 </script>
