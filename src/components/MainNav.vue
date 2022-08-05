@@ -49,22 +49,35 @@
 <script>
 import MainNavLink from "@/components/MainNavLink.vue";
 import { collapsed, toggleSidebar, sidebarWidth } from "@/composables/state";
-import { computed } from "vue";
+import { computed, onMounted } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 export default {
   name: "MainNav",
   components: { MainNavLink },
   setup() {
+    let auth;
     const store = useStore();
     const router = useRouter();
     const isLoggedIn = computed(() => {
       return store.state.isLoggedIn;
     });
+    onMounted(() => {
+      auth = getAuth();
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          store.commit("LOGIN_USER");
+        } else {
+          store.commit("LOGOUT_USER");
+        }
+      });
+    });
     const logOutUser = () => {
-      store.commit("LOGOUT_USER");
-      router.push({ name: "login" });
+      signOut(auth).then(() => {
+        router.push({ name: "login" });
+      });
     };
     return { collapsed, toggleSidebar, sidebarWidth, isLoggedIn, logOutUser };
   },
