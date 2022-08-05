@@ -100,11 +100,12 @@ const getCurrentUser = () => {
 
 router.beforeEach(async (to, from, next) => {
   if (to.matched.some((record) => record.meta.requiresAuth)) {
+    next();
+  } else {
     if (await getCurrentUser()) {
       next();
     } else {
-      alert("You don't have access!");
-      next("/");
+      next(); // TODO: Redirect the user
     }
   }
 });

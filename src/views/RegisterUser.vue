@@ -34,7 +34,12 @@
 
 <script setup>
 import { ref } from "vue";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
 import { useRouter } from "vue-router";
 
 const firstName = ref("");
@@ -48,14 +53,26 @@ const register = () => {
   createUserWithEmailAndPassword(getAuth(), email.value, password.value)
     .then(() => {
       console.log("Successfully registered!");
-      router.push({ name: "blog" });
+      router.push("/");
+      error.value = "";
     })
     .catch((error) => {
       console.log(error.code);
-      alert(error.message);
+      error.value = error.message;
     });
 };
-const signInWithGoogle = () => {};
+const signInWithGoogle = () => {
+  const provider = new GoogleAuthProvider();
+  signInWithPopup(getAuth(), provider)
+    .then((result) => {
+      console.log(result.user);
+      router.push("/");
+      error.value = "";
+    })
+    .catch((error) => {
+      error.value = error.message;
+    });
+};
 </script>
 <script>
 export default {

@@ -25,7 +25,6 @@
 <script>
 import { ref } from "vue";
 import { useStore } from "vuex";
-import { useRouter } from "vue-router";
 
 export default {
   name: "LogIn",
@@ -33,11 +32,9 @@ export default {
     const email = ref("");
     const password = ref("");
     const store = useStore();
-    const router = useRouter();
 
     const loginUser = () => {
       store.commit("LOGIN_USER");
-      router.push({ name: "home" });
     };
     return {
       email,
