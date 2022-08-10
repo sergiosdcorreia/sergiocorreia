@@ -3,56 +3,53 @@
     <div class="skillCircle">
       <div class="outer">
         <div class="inner">
-          <div id="number">{{ animatedSkillValue }}%</div>
+          <div id="number">{{ animatedSkill }}%</div>
         </div>
       </div>
       <svg
+        :class="skills.skillName"
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"
         width="160px"
         height="160px"
       >
-        <defs>
-          <linearGradient id="GradientColor">
-            <stop offset="0%" stop-color="#e91e63" />
-            <stop offset="100%" stop-color="#673ab7" />
-          </linearGradient>
-        </defs>
-        <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        <circle id="circle" cx="80" cy="80" r="70" stroke-linecap="round" />
       </svg>
     </div>
-    <!--<div>{{ skill.name }}</div>-->
-    <div class="skillName">Bootstrap</div>
+    <div class="skillName">{{ skills.skillName }}</div>
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref, onMounted } from "vue";
 
-export default {
-  name: "AnimatedSkill",
-  setup() {
-    const skillValue = ref(65);
-    const speedValue = ref(30);
-    const animatedSkillValue = ref(null);
-
-    const skillCounter = () => {
-      let counter = 0;
-      setInterval(() => {
-        if (counter == skillValue.value) {
-          clearInterval();
-        } else {
-          counter++;
-          animatedSkillValue.value = counter;
-        }
-      }, speedValue.value);
-    };
-
-    onMounted(skillCounter);
-
-    return { animatedSkillValue };
+const props = defineProps({
+  skills: {
+    type: Array,
+    default() {
+      return [];
+    },
   },
-};
+});
+const animatedSkill = ref(null);
+
+function skillCounter() {
+  let counter = 0;
+  document
+    .querySelector(`.${props.skills.skillName}`)
+    .style.setProperty("--percent", props.skills.offset);
+  setInterval(() => {
+    if (counter == props.skills.skillPercent) {
+      clearInterval();
+    } else {
+      counter++;
+      animatedSkill.value = counter;
+    }
+  }, props.skills.speed);
+  console.log(props.skills.offset);
+}
+
+onMounted(skillCounter);
 </script>
 
 <style lang="scss" scoped>
@@ -98,6 +95,7 @@ export default {
       top: 0;
       left: 0;
       transform: rotate(-90deg);
+      --percent: 472;
 
       circle {
         fill: none;
@@ -105,7 +103,7 @@ export default {
         stroke-width: 20px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
-        animation: anim 2s linear forwards;
+        animation: anim 2s ease-in forwards;
       }
     }
   }
@@ -118,7 +116,7 @@ export default {
 
 @keyframes anim {
   100% {
-    stroke-dashoffset: 165.2;
+    stroke-dashoffset: var(--percent);
   }
 }
 </style>

@@ -6,7 +6,9 @@
     <h2>Technologies</h2>
     <h3>Development</h3>
     <h4>HTML/CSS</h4>
-    <AnimatedSkill />
+    <template v-for="skill in skills" :key="skill.skillName">
+      <AnimatedSkill :skills="skill" />
+    </template>
     <p>Bootstrap</p>
     <p>Tailwind</p>
     <h4>JavaScript</h4>
@@ -28,10 +30,16 @@
 </template>
 
 <script>
+import { ref } from "vue";
+import Skills from "@/data/skills.json";
 import AnimatedSkill from "@/components/AnimatedSkill.vue";
 
 export default {
   name: "HomeView",
   components: { AnimatedSkill },
+  setup() {
+    const skills = ref(Skills);
+    return { skills };
+  },
 };
 </script>

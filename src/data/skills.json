@@ -1,0 +1,32 @@
+[
+  {
+    "skillName": "CSS",
+    "skillPercent": 95,
+    "speed": 45,
+    "offset": 75
+  },
+  {
+    "skillName": "Bootstrap",
+    "skillPercent": 65,
+    "speed": 30,
+    "offset": 165.2
+  },
+  {
+    "skillName": "Tailwind",
+    "skillPercent": 75,
+    "speed": 35,
+    "offset": 180
+  },
+  {
+    "skillName": "Vue",
+    "skillPercent": 85,
+    "speed": 40,
+    "offset": 90
+  },
+  {
+    "skillName": "React",
+    "skillPercent": 55,
+    "speed": 25,
+    "offset": 225
+  }
+]
