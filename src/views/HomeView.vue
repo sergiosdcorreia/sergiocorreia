@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>Sergio Correia</h1>
+    <h1 class="main-title">sergio correia</h1>
     <h2>Building a better web.</h2>
     <p>Front End Web Developer</p>
     <h2>Technologies</h2>
@@ -45,3 +45,12 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.main-title {
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: #e0d9da;
+}
+</style>

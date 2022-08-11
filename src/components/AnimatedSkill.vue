@@ -99,7 +99,7 @@ onMounted(skillCounter);
 
       circle {
         fill: none;
-        stroke: orange;
+        stroke: #ff824a;
         stroke-width: 20px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
