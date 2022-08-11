@@ -32,32 +32,15 @@
 </template>
 
 <script>
-import { ref, onMounted } from "vue";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "@/firebase/firebaseInit";
+import { getSkills } from "@/composables/data.js";
 import AnimatedSkill from "@/components/AnimatedSkill.vue";
 
 export default {
   name: "HomeView",
   components: { AnimatedSkill },
   setup() {
-    const skills = ref([]);
+    const { skills } = getSkills();
 
-    const getSkills = async () => {
-      let fbSkills = [];
-      const querySnapshot = await getDocs(collection(db, "skills"));
-      querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
-        const skills = {
-          id: doc.id,
-          ...doc.data(),
-        };
-        fbSkills.push(skills);
-      });
-      skills.value = fbSkills;
-    };
-
-    onMounted(getSkills);
     return { skills };
   },
 };
