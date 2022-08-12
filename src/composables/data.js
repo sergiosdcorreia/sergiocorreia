@@ -7,7 +7,8 @@ export const getSkills = () => {
 
   const getFBSkills = async () => {
     let fbSkills = [];
-    const querySnapshot = await getDocs(collection(db, "skills"));
+    const q = query(collection(db, "skills"), orderBy("skillPercent", "desc"));
+    const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       const skills = {
         id: doc.id,
