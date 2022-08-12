@@ -9,18 +9,59 @@
         <img src="@/assets/images/SergioFoto200.png" />
       </div>
     </section>
-    <section class="content-section p-6 mt-10">
-      <h3>He loves development and design</h3>
-      <p class="pt-4">
-        Being passionate about Design and Technology, he finds himself
-        constantly exploring and learning about new trends and technologies in
-        the field of <span class="font-bold">Web Design</span> and
-        <span class="font-bold">Development</span>. If you need someone who can
-        quickly prototype and develop with <span class="font-bold">HTML</span>,
-        <span class="font-bold">CSS</span> and
-        <span class="font-bold">JavaScript (Vue.js)</span> let's talk!
-      </p>
-    </section>
+    <div class="flex">
+      <section class="content-section w-50 p-6 mt-10 mr-10">
+        <h3>He loves development and design</h3>
+        <p class="pt-4">
+          Being passionate about Design and Technology, he finds himself
+          constantly exploring and learning about new trends and technologies in
+          the field of <span class="font-bold">Web Design</span> and
+          <span class="font-bold">Development</span>. If you need someone who
+          can quickly prototype and develop with
+          <span class="font-bold">HTML</span>,
+          <span class="font-bold">CSS</span> and
+          <span class="font-bold">JavaScript (Vue.js)</span> let's talk!
+        </p>
+      </section>
+      <section class="content-section p-6 mt-10">
+        <h3>Work experience</h3>
+        <div class="flex pt-4">
+          <p class="year pr-4">2020</p>
+          <div class="flex flex-col items-center pt-2 pr-4">
+            <div class="circle"></div>
+            <div class="dotted-line"></div>
+          </div>
+          <div>
+            <p class="font-bold">Frontend Web Developer (UK, Newquay)</p>
+            <p>Flowmoco, Dec 2020 - Present</p>
+          </div>
+        </div>
+        <div class="flex pt-4">
+          <p class="year pr-4">2019</p>
+          <div class="flex flex-col items-center pt-2 pr-4">
+            <div class="circle"></div>
+            <div class="dotted-line"></div>
+          </div>
+          <div>
+            <p class="font-bold">Frontend Web Developer (UK, Bideford)</p>
+            <p>Travel Chapter, Nov 2019 - Oct 2020 (1 year)</p>
+          </div>
+        </div>
+        <div class="flex pt-4">
+          <p class="year pr-4">2017</p>
+          <div class="flex flex-col items-center pt-2 pr-4">
+            <div class="circle"></div>
+            <div class="dotted-line"></div>
+          </div>
+          <div>
+            <p class="font-bold">
+              Frontend Web Developer and Designer (UK, Exeter)
+            </p>
+            <p>Funeral Guide, Apr 2017 - Nov 2019 (2 years 8 months)</p>
+          </div>
+        </div>
+      </section>
+    </div>
     <section class="content-section p-6 mt-10">
       <div v-if="skills.length" class="flex">
         <template v-for="skill in skills" :key="skill.skillName">
@@ -94,5 +135,25 @@ p {
 .content-section {
   background-color: #25272b;
   border-radius: 16px;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.year {
+  color: #ff824a;
+}
+
+.dotted-line {
+  border-right: 1px dashed #a5a4a4;
+  height: 100%;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ff824a;
 }
 </style>
