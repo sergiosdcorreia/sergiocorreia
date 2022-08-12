@@ -73,7 +73,7 @@ export default {
     45deg,
     rgba(40, 43, 48, 1) 0%,
     rgba(40, 43, 48, 1) 35%,
-    rgba(32, 57, 97, 1) 100%
+    rgba(53, 61, 73, 1) 100%
   );
   height: 100%;
   min-height: 100%;

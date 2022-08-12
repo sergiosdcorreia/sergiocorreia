@@ -1,5 +1,5 @@
 <template>
-  <div class="skill">
+  <div class="skill m-6">
     <div class="skillCircle">
       <div class="outer">
         <div class="inner">
@@ -65,17 +65,21 @@ onMounted(skillCounter);
     position: relative;
 
     .outer {
-      height: 160px;
-      width: 160px;
+      height: 150px;
+      width: 150px;
       border-radius: 50%;
-
-      position: relative;
+      background-color: #353d49;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
 
       .inner {
-        height: 120px;
-        width: 120px;
+        height: 130px;
+        width: 130px;
         border-radius: 50%;
         box-shadow: inset;
+        background-color: #25272b;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -83,6 +87,10 @@ onMounted(skillCounter);
 
         #number {
           position: absolute;
+          font-family: "Baloo 2", sans-serif;
+          font-size: 20px;
+          font-weight: 700;
+          color: #e0d9da;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
@@ -100,7 +108,7 @@ onMounted(skillCounter);
       circle {
         fill: none;
         stroke: #ff824a;
-        stroke-width: 20px;
+        stroke-width: 10px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
         animation: anim 2s ease-in forwards;
@@ -110,8 +118,11 @@ onMounted(skillCounter);
 }
 
 .skillName {
+  font-family: "Baloo 2", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #e0d9da;
   padding-top: 16px;
-  font-weight: 600;
 }
 
 @keyframes anim {

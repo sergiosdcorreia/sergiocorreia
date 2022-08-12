@@ -94,7 +94,7 @@ export default {
 
 <style scoped>
 .sidebar {
-  color: white;
+  color: #e0d9da;
   background-color: var(--sidebar-bg-color);
 
   position: fixed;
