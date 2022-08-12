@@ -5,7 +5,7 @@
         <p><span>Error:</span>{{ errorMsg }}</p>
       </div>
       <div class="blog-info">
-        <input type="text" placeholder="Enter Post Title" v-model="postTitle" />
+        <input v-model="postTitle" type="text" placeholder="Enter Post Title" />
         <input
           v-model="postDescription"
           type="text"
