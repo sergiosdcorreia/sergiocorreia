@@ -20,7 +20,7 @@
           can quickly prototype and develop with
           <span class="font-bold">HTML</span>,
           <span class="font-bold">CSS</span> and
-          <span class="font-bold">JavaScript (Vue.js)</span> let's talk!
+          <span class="font-bold">JavaScript (Vue.js)</span> hire him!
         </p>
       </section>
       <section class="content-section p-6 mt-10">
@@ -62,7 +62,7 @@
         </div>
       </section>
     </div>
-    <section class="content-section p-6 mt-10">
+    <section class="content-section flex justify-around p-6 mt-10">
       <div v-if="skills.length" class="flex">
         <template v-for="skill in skills" :key="skill.skillName">
           <AnimatedSkill :skills="skill" />
