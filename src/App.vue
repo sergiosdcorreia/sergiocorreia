@@ -64,6 +64,11 @@ export default {
     url("./assets/fonts/baloo2/baloo-2-v14-latin-700.woff2") format("woff2"),
     url("./assets/fonts/baloo2/baloo-2-v14-latin-700.woff") format("woff");
 }
+
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
 </style>
 <style scoped>
 .app-container {
