@@ -24,7 +24,7 @@
         </p>
       </section>
       <section class="content-section p-6 mt-10">
-        <h3>Work experience</h3>
+        <h3>Around 5 years of development experience</h3>
         <div v-if="workExperience.length">
           <template v-for="work in workExperience" :key="work.company">
             <WorkExperience :work-experience="work" />
@@ -32,13 +32,48 @@
         </div>
       </section>
     </div>
-    <section class="content-section flex justify-around p-6 mt-10">
-      <div v-if="skills.length" class="flex">
-        <template v-for="skill in skills" :key="skill.skillName">
-          <AnimatedSkill :skills="skill" />
-        </template>
-      </div>
-    </section>
+    <div class="flex">
+      <section class="content-section p-6 mt-10 mr-10">
+        <h3>Where you can contact him</h3>
+        <div class="flex pt-6">
+          <div class="icon-bg flex justify-center items-center mr-6">
+            <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p>Location</p>
+            <p class="font-bold">Bideford, UK</p>
+          </div>
+        </div>
+        <div class="flex pt-6">
+          <div class="icon-bg flex justify-center items-center mr-6">
+            <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p>Email</p>
+            <p class="font-bold">sergiosdcorreia@gmail.com</p>
+          </div>
+        </div>
+        <div class="flex pt-6">
+          <div class="icon-bg flex justify-center items-center mr-6">
+            <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
+          </div>
+          <div class="flex flex-col justify-center">
+            <p>Phone</p>
+            <p class="font-bold">(+44) 7462 184484</p>
+          </div>
+        </div>
+      </section>
+      <section class="content-section flex justify-around p-6 mt-10">
+        <div class="flex flex-col">
+          <h3>His skillset</h3>
+          <div v-if="skills.length" class="flex">
+            <template v-for="skill in skills" :key="skill.skillName">
+              <AnimatedSkill :skills="skill" />
+            </template>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -110,5 +145,17 @@ p {
 
 .w-50 {
   width: 50%;
+}
+
+.icon-bg {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #ff824a;
+
+  .icon {
+    color: #e0d9da;
+    font-size: 30px;
+  }
 }
 </style>

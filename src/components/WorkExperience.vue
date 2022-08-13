@@ -7,7 +7,7 @@
     </div>
     <div>
       <p class="font-bold">
-        {{ workExperience.role }} {{ workExperience.location }}
+        {{ workExperience.role }} ({{ workExperience.location }})
       </p>
       <p>{{ workExperience.company }}, {{ workExperience.duration }}</p>
     </div>

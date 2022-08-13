@@ -14,6 +14,7 @@ import {
   faCamera,
   faPenToSquare,
   faArrowRightFromBracket,
+  faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -24,7 +25,8 @@ library.add(
   faArrowRightToBracket,
   faAngleDoubleLeft,
   faPenToSquare,
-  faArrowRightFromBracket
+  faArrowRightFromBracket,
+  faLocationDot
 );
 
 createApp(App)
