@@ -13,7 +13,7 @@
         width="160px"
         height="160px"
       >
-        <circle id="circle" cx="80" cy="80" r="70" stroke-linecap="round" />
+        <circle class="circle" cx="80" cy="80" r="70" stroke-linecap="round" />
       </svg>
     </div>
     <div class="skillName">{{ skills.skillName }}</div>
