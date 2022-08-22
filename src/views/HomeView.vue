@@ -104,21 +104,21 @@ export default {
   font-weight: 700;
   font-size: 78px;
   line-height: 78px;
-  color: #e0d9da;
+  color: var(--light-grey);
 }
 
 .subtitle {
   font-family: "Baloo 2", sans-serif;
   font-weight: 700;
   font-size: 24px;
-  color: #ff824a;
+  color: var(--primary);
 }
 
 .profile-picture {
   width: 160px;
   height: 160px;
   border-radius: 50%;
-  background-color: #e0d9da;
+  background-color: var(--light-grey);
 
   img {
     width: 150px;
@@ -131,15 +131,15 @@ h3 {
   font-family: "Baloo 2", sans-serif;
   font-weight: 700;
   font-size: 18px;
-  color: #e0d9da;
+  color: var(--light-grey);
 }
 
 p {
-  color: #e0d9da;
+  color: var(--light-grey);
 }
 
 .content-section {
-  background-color: #25272b;
+  background-color: var(--darker-grey);
   border-radius: 16px;
 }
 
@@ -151,10 +151,10 @@ p {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  background-color: #ff824a;
+  background-color: var(--primary);
 
   .icon {
-    color: #e0d9da;
+    color: var(--light-grey);
     font-size: 30px;
   }
 }

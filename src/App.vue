@@ -42,34 +42,6 @@ export default {
 };
 </script>
 
-<style>
-@font-face {
-  font-family: "Baloo 2";
-  font-weight: 400;
-  font-style: normal;
-  font-display: auto;
-  unicode-range: U+000-5FF;
-  src: local("baloo2"),
-    url("./assets/fonts/baloo2/baloo-2-v14-latin-regular.woff2") format("woff2"),
-    url("./assets/fonts/baloo2/baloo-2-v14-latin-regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Baloo 2";
-  font-weight: 700;
-  font-style: normal;
-  font-display: auto;
-  unicode-range: U+000-5FF;
-  src: local("baloo2"),
-    url("./assets/fonts/baloo2/baloo-2-v14-latin-700.woff2") format("woff2"),
-    url("./assets/fonts/baloo2/baloo-2-v14-latin-700.woff") format("woff");
-}
-
-html,
-body {
-  font-family: "Roboto", sans-serif;
-}
-</style>
 <style scoped>
 .app-container {
   transition: 0.3s ease;

@@ -84,18 +84,10 @@ export default {
 };
 </script>
 
-<style>
-:root {
-  --sidebar-bg-color: #ff824a;
-  --sidebar-item-hover: #ffa277;
-  --sidebar-item-active: #dc573d;
-}
-</style>
-
 <style scoped>
 .sidebar {
-  color: #e0d9da;
-  background-color: var(--sidebar-bg-color);
+  color: var(--light-grey);
+  background-color: var(--primary);
 
   position: fixed;
   z-index: 1;

@@ -27,11 +27,11 @@ defineProps({
 
 <style lang="scss" scoped>
 .year {
-  color: #ff824a;
+  color: var(--primary);
 }
 
 .dotted-line {
-  border-right: 1px dashed #a5a4a4;
+  border-right: 1px dashed var(--grey);
   height: 100%;
 }
 
@@ -39,10 +39,10 @@ defineProps({
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: #ff824a;
+  background-color: var(--primary);
 }
 
 p {
-  color: #e0d9da;
+  color: var(--light-grey);
 }
 </style>

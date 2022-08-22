@@ -68,7 +68,7 @@ onMounted(skillCounter);
       height: 150px;
       width: 150px;
       border-radius: 50%;
-      background-color: #353d49;
+      background-color: var(--dark-grey);
       position: absolute;
       top: 50%;
       left: 50%;
@@ -79,7 +79,7 @@ onMounted(skillCounter);
         width: 130px;
         border-radius: 50%;
         box-shadow: inset;
-        background-color: #25272b;
+        background-color: var(--darker-grey);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -90,7 +90,7 @@ onMounted(skillCounter);
           font-family: "Baloo 2", sans-serif;
           font-size: 20px;
           font-weight: 700;
-          color: #e0d9da;
+          color: var(--light-grey);
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
@@ -107,7 +107,7 @@ onMounted(skillCounter);
 
       circle {
         fill: none;
-        stroke: #ff824a;
+        stroke: var(--primary);
         stroke-width: 10px;
         stroke-dasharray: 472;
         stroke-dashoffset: 472;
@@ -121,7 +121,7 @@ onMounted(skillCounter);
   font-family: "Baloo 2", sans-serif;
   font-size: 20px;
   font-weight: 700;
-  color: #e0d9da;
+  color: var(--light-grey);
   padding-top: 16px;
 }
 
