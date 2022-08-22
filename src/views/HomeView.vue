@@ -34,7 +34,7 @@
     </div>
     <div class="flex">
       <section class="content-section p-6 mt-10 mr-10">
-        <h3>Where you can contact him</h3>
+        <h3>Where you can find him</h3>
         <div class="flex pt-6">
           <div class="icon-bg flex justify-center items-center mr-6">
             <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
