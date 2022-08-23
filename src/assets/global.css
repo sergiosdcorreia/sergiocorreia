@@ -6,6 +6,8 @@
   --light-grey: #e0d9da;
   --dark-grey: #353d49;
   --darker-grey: #25272b;
+
+  --error: #ff4a4a;
 }
 
 @font-face {

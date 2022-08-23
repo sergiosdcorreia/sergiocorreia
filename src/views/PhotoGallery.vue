@@ -2,6 +2,7 @@
   <h1 @click="showModal = true" class="text-6xl font-bold">
     This is the Photo Gallery page
   </h1>
+  <UploadForm />
   <Gallery :gallery="gallery"></Gallery>
   <CardModal :showing="showModal" />
 </template>
@@ -9,10 +10,11 @@
 <script>
 import { ref } from "vue";
 import CardModal from "@/components/CardModal.vue";
+import UploadForm from "@/components/UploadForm.vue";
 
 export default {
   name: "PhotoGallery",
-  components: { CardModal },
+  components: { CardModal, UploadForm },
   setup() {
     const showModal = ref(false);
     const gallery = ref([
