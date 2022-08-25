@@ -1,13 +1,16 @@
 import { ref, onMounted } from "vue";
 import { query, collection, getDocs, orderBy } from "firebase/firestore";
-import { db } from "@/firebase/firebaseInit";
+import { projectFirestore } from "@/firebase/firebaseInit";
 
 export const getSkills = () => {
   const skills = ref([]);
 
   const getFBSkills = async () => {
     let fbSkills = [];
-    const q = query(collection(db, "skills"), orderBy("skillPercent", "desc"));
+    const q = query(
+      collection(projectFirestore, "skills"),
+      orderBy("skillPercent", "desc")
+    );
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       const skills = {
@@ -28,7 +31,10 @@ export const getWorkExperience = () => {
 
   const getFBWorkExperience = async () => {
     let fbWorkExperience = [];
-    const q = query(collection(db, "work experience"), orderBy("year", "desc"));
+    const q = query(
+      collection(projectFirestore, "work experience"),
+      orderBy("year", "desc")
+    );
     const querySnapshot = await getDocs(q);
     querySnapshot.forEach((doc) => {
       const workExperience = {
