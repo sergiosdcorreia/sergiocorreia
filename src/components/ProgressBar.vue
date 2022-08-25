@@ -15,6 +15,7 @@ export default {
       },
     },
   },
+  emits: ["complete"],
   setup(props, context) {
     const { progress } = useStorage(props.file);
 

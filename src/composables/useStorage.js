@@ -1,6 +1,11 @@
 import { ref } from "vue";
-import { projectStorage, storageRef } from "@/firebase/firebaseInit";
+import {
+  projectStorage,
+  projectFirestore,
+  storageRef,
+} from "@/firebase/firebaseInit";
 import { uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { collection, addDoc } from "firebase/firestore";
 
 const useStorage = (file) => {
   const error = ref(null);
@@ -20,10 +25,14 @@ const useStorage = (file) => {
       error.value = err;
       console.log(err.message);
     },
-    () => {
-      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+    async () => {
+      await getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
         console.log("file available at", downloadURL);
         url.value = downloadURL;
+        addDoc(collection(projectFirestore, "photos"), {
+          name: file.name,
+          url: downloadURL,
+        });
       });
     }
   );
