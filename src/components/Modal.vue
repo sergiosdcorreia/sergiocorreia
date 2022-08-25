@@ -1,6 +1,8 @@
 <template>
   <div class="backdrop" @click="handleClick">
-    <img :src="imgUrl" />
+    <transition name="image" appear>
+      <img :src="imgUrl" />
+    </transition>
   </div>
 </template>
 
@@ -42,5 +44,14 @@ export default {
     box-shadow: 3px 5px 7px rgba($color: #000000, $alpha: 0.5);
     position: relative;
   }
+}
+.image-enter-from {
+  bottom: -200%;
+}
+.image-enter-to {
+  bottom: 0;
+}
+.image-enter-active {
+  transition: all ease-in-out 0.5s;
 }
 </style>
