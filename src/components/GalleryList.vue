@@ -1,18 +1,28 @@
 <template>
-  <div class="img-wrap">
+  <div class="img-wrap" @click="handleClick(documents.url)">
     <img :src="documents.url" :alt="documents.name" />
   </div>
 </template>
 
-<script setup>
-defineProps({
-  documents: {
-    type: Array,
-    default() {
-      return [];
+<script>
+export default {
+  props: {
+    documents: {
+      type: Array,
+      default() {
+        return [];
+      },
     },
   },
-});
+  emits: ["selected"],
+  setup(props, context) {
+    const handleClick = (url) => {
+      context.emit("selected", url);
+    };
+
+    return { handleClick };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -22,6 +32,7 @@ defineProps({
   padding: 50% 0;
   position: relative;
   opacity: 0.8;
+  cursor: pointer;
 
   img {
     min-width: 100%;

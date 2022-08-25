@@ -11,28 +11,37 @@
     class="img-grid"
   >
     <template v-for="document in documents" :key="document.id">
-      <GalleryList :documents="document" />
+      <GalleryList :documents="document" @selected="updateSelectedImgUrl" />
     </template>
   </transition-group>
-  <CardModal :showing="showModal" />
+  <Modal
+    v-if="selectedImgUrl"
+    :img-url="selectedImgUrl"
+    @close="updateSelectedImgUrl"
+  />
 </template>
 
 <script>
 import { ref } from "vue";
-import CardModal from "@/components/CardModal.vue";
 import GalleryList from "@/components/GalleryList.vue";
 import UploadForm from "@/components/UploadForm.vue";
+import Modal from "@/components/Modal.vue";
 import { useCollection } from "@/composables/useCollection";
 
 export default {
   name: "PhotoGallery",
-  components: { CardModal, UploadForm, GalleryList },
+  components: { UploadForm, GalleryList, Modal },
   setup() {
-    const showModal = ref(false);
+    const selectedImgUrl = ref(null);
+
+    const updateSelectedImgUrl = (url) => {
+      selectedImgUrl.value = url;
+      console.log(selectedImgUrl);
+    };
 
     const { documents } = useCollection();
 
-    return { showModal, documents };
+    return { documents, selectedImgUrl, updateSelectedImgUrl };
   },
 };
 </script>
