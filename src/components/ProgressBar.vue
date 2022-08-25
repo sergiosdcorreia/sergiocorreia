@@ -4,11 +4,25 @@
 
 <script>
 import useStorage from "@/composables/useStorage";
+import { watchEffect } from "vue";
 
 export default {
-  props: ["file"],
-  setup(props) {
-    useStorage(props.file);
+  props: {
+    file: {
+      type: Array,
+      default() {
+        return [];
+      },
+    },
+  },
+  setup(props, context) {
+    const { progress } = useStorage(props.file);
+
+    watchEffect(() => {
+      if (progress.value >= 100) {
+        context.emit("complete");
+      }
+    });
   },
 };
 </script>

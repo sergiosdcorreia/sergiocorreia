@@ -13,6 +13,8 @@ const useStorage = (file) => {
     "state_changed",
     (snapshot) => {
       console.log(snapshot);
+      let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      progress.value = percentage;
     },
     (err) => {
       error.value = err;
@@ -21,6 +23,7 @@ const useStorage = (file) => {
     () => {
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
         console.log("file available at", downloadURL);
+        url.value = downloadURL;
       });
     }
   );
