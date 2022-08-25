@@ -26,10 +26,11 @@ defineProps({
   img {
     min-width: 100%;
     min-height: 100%;
-    max-width: 100%;
+    max-width: 180%;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -70%;
+    left: -50%;
+    transform: translate(0, 50%);
   }
 }
 </style>

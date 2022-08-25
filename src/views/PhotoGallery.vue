@@ -3,11 +3,17 @@
     This is the Photo Gallery page
   </h1>
   <UploadForm />
-  <div v-if="documents.length" class="img-grid">
+  <transition-group
+    v-if="documents.length"
+    tag="div"
+    name="grid"
+    appear
+    class="img-grid"
+  >
     <template v-for="document in documents" :key="document.id">
       <GalleryList :documents="document" />
     </template>
-  </div>
+  </transition-group>
   <CardModal :showing="showModal" />
 </template>
 
@@ -37,5 +43,14 @@ export default {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 40px;
+}
+.grid-enter-from {
+  opacity: 0;
+}
+.grid-enter-to {
+  opacity: 0.8;
+}
+.grid-enter-active {
+  transition: all 3s ease;
 }
 </style>
