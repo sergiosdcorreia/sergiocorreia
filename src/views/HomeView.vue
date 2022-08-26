@@ -33,36 +33,7 @@
       </section>
     </div>
     <div class="flex">
-      <section class="content-section p-6 mt-10 mr-10">
-        <h3>Where you can find him</h3>
-        <div class="flex pt-6">
-          <div class="icon-bg flex justify-center items-center mr-6">
-            <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
-          </div>
-          <div class="flex flex-col justify-center">
-            <p>Location</p>
-            <p class="font-bold">Bideford, UK</p>
-          </div>
-        </div>
-        <div class="flex pt-6">
-          <div class="icon-bg flex justify-center items-center mr-6">
-            <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
-          </div>
-          <div class="flex flex-col justify-center">
-            <p>Email</p>
-            <p class="font-bold">sergiosdcorreia@gmail.com</p>
-          </div>
-        </div>
-        <div class="flex pt-6">
-          <div class="icon-bg flex justify-center items-center mr-6">
-            <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
-          </div>
-          <div class="flex flex-col justify-center">
-            <p>Phone</p>
-            <p class="font-bold">(+44) 7462 184484</p>
-          </div>
-        </div>
-      </section>
+      <Info />
       <section class="content-section flex justify-around p-6 mt-10">
         <div class="flex flex-col">
           <h3>His skillset</h3>
@@ -78,13 +49,14 @@
 </template>
 
 <script>
-import { getSkills, getWorkExperience } from "@/composables/data.js";
 import AnimatedSkill from "@/components/AnimatedSkill.vue";
+import Info from "@/components/Info.vue";
 import WorkExperience from "@/components/WorkExperience.vue";
+import { getSkills, getWorkExperience } from "@/composables/data.js";
 
 export default {
   name: "HomeView",
-  components: { AnimatedSkill, WorkExperience },
+  components: { AnimatedSkill, Info, WorkExperience },
   setup() {
     const { skills } = getSkills();
     const { workExperience } = getWorkExperience();
@@ -145,17 +117,5 @@ p {
 
 .w-50 {
   width: 50%;
-}
-
-.icon-bg {
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  background-color: var(--primary);
-
-  .icon {
-    color: var(--light-grey);
-    font-size: 30px;
-  }
 }
 </style>

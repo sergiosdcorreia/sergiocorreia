@@ -1,0 +1,65 @@
+<template>
+  <section class="content-section p-6 mt-10 mr-10">
+    <h3>Where you can find him</h3>
+    <div class="flex pt-6">
+      <div class="icon-bg flex justify-center items-center mr-6">
+        <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
+      </div>
+      <div class="flex flex-col justify-center">
+        <p>Location</p>
+        <p class="font-bold">Bideford, UK</p>
+      </div>
+    </div>
+    <div class="flex pt-6">
+      <div class="icon-bg flex justify-center items-center mr-6">
+        <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
+      </div>
+      <div class="flex flex-col justify-center">
+        <p>Email</p>
+        <p class="font-bold">sergiosdcorreia@gmail.com</p>
+      </div>
+    </div>
+    <div class="flex pt-6">
+      <div class="icon-bg flex justify-center items-center mr-6">
+        <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
+      </div>
+      <div class="flex flex-col justify-center">
+        <p>Phone</p>
+        <p class="font-bold">(+44) 7462 184484</p>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  name: "PersonalInfo",
+};
+</script>
+
+<style lang="scss" scoped>
+.content-section {
+  background-color: var(--darker-grey);
+  border-radius: 16px;
+}
+h3 {
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--light-grey);
+}
+p {
+  color: var(--light-grey);
+}
+.icon-bg {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: var(--primary);
+
+  .icon {
+    color: var(--light-grey);
+    font-size: 30px;
+  }
+}
+</style>
