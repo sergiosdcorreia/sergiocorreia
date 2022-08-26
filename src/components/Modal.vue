@@ -47,11 +47,13 @@ export default {
 }
 .image-enter-from {
   bottom: -200%;
+  opacity: 0;
 }
 .image-enter-to {
   bottom: 0;
+  opacity: 1;
 }
 .image-enter-active {
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.7s;
 }
 </style>
