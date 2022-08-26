@@ -13,15 +13,16 @@
       <section class="content-section w-50 p-6 mt-10 mr-10">
         <h3>He loves development and design</h3>
         <p class="pt-4">
-          Being passionate about Design and Technology, he finds himself
+          Being passionate about Technology and Design, he finds himself
           constantly exploring and learning about new trends and technologies in
-          the field of <span class="font-bold">Web Design</span> and
-          <span class="font-bold">Development</span>. If you need someone who
-          can quickly prototype and develop with
+          the field of <span class="font-bold">Web Development</span> and
+          <span class="font-bold">Web Design</span>. If you need someone who can
+          quickly prototype and develop with
           <span class="font-bold">HTML</span>,
           <span class="font-bold">CSS</span> and
-          <span class="font-bold">JavaScript (Vue.js)</span> hire him!
+          <span class="font-bold">JavaScript (Vue.js)</span>
         </p>
+        <button class="btn-primary mt-6">Hire him!</button>
       </section>
       <section class="content-section p-6 mt-10">
         <h3>Around 5 years of development experience</h3>
@@ -108,6 +109,13 @@ h3 {
 
 p {
   color: var(--light-grey);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  padding: 0.5em 1em;
+  color: var(--light-grey);
+  border-radius: 35px;
 }
 
 .content-section {
