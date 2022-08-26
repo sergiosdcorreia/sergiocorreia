@@ -39,7 +39,7 @@ export default {
       console.log(selectedImgUrl);
     };
 
-    const { documents } = useCollection();
+    const { documents } = useCollection("photos");
 
     return { documents, selectedImgUrl, updateSelectedImgUrl };
   },
