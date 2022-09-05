@@ -3,6 +3,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import HomeView from "@/views/HomeView.vue";
 import CreatePost from "@/views/CreatePost.vue";
 import PhotoGallery from "@/views/PhotoGallery.vue";
+import DrawingGallery from "@/views/DrawingGallery.vue";
 import BlogView from "@/views/BlogView.vue";
 import Login from "@/views/Login.vue";
 import RegisterUser from "@/views/RegisterUser.vue";
@@ -40,6 +41,14 @@ const routes = [
     component: PhotoGallery,
     meta: {
       title: "Photo Gallery",
+    },
+  },
+  {
+    path: "/drawing-gallery",
+    name: "drawinggallery",
+    component: DrawingGallery,
+    meta: {
+      title: "Drawing Gallery",
     },
   },
   {

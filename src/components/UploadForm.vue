@@ -7,7 +7,13 @@
     <div class="output">
       <div v-if="fileError" class="error">{{ fileError }}</div>
       <div v-if="file">{{ file.name }}</div>
-      <ProgressBar v-if="file" :file="file" @complete="file = null" />
+      <ProgressBar
+        v-if="file"
+        :file="file"
+        :collection-ref="collectionRef"
+        :collection-name="collectionName"
+        @complete="file = null"
+      />
     </div>
   </form>
 </template>
@@ -18,6 +24,16 @@ import ProgressBar from "@/components/ProgressBar.vue";
 export default {
   name: "UploadForm",
   components: { ProgressBar },
+  props: {
+    collectionRef: {
+      type: String,
+      default: "",
+    },
+    collectionName: {
+      type: String,
+      default: "",
+    },
+  },
   setup() {
     const file = ref(null);
     const fileError = ref(null);

@@ -16,6 +16,9 @@
     <MainNavLink :to="{ name: 'photogallery' }" icon="fa-solid fa-camera"
       >Photo Gallery</MainNavLink
     >
+    <MainNavLink :to="{ name: 'drawinggallery' }" icon="fa-solid fa-camera"
+      >Drawing Gallery</MainNavLink
+    >
     <div v-if="isLoggedIn">
       <MainNavLink :to="{ name: 'blog' }" icon="fa-solid fa-rss"
         >Blog</MainNavLink

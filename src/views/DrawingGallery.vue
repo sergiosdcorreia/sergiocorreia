@@ -1,6 +1,6 @@
 <template>
   <h1 class="text-6xl font-bold" @click="showModal = true">
-    This is the Photo Gallery page
+    This is the Drawing Gallery page
   </h1>
   <UploadForm
     :collection-ref="collectionRef"
@@ -36,12 +36,11 @@ export default {
   components: { UploadForm, GalleryList, Modal },
   setup() {
     const selectedImgUrl = ref(null);
-    const collectionRef = "photos/";
-    const collectionName = "photos";
+    const collectionRef = "drawings/";
+    const collectionName = "drawings";
 
     const updateSelectedImgUrl = (url) => {
       selectedImgUrl.value = url;
-      console.log(selectedImgUrl);
     };
 
     const { documents } = useCollection(collectionName);

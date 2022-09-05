@@ -22,7 +22,7 @@
           <span class="font-bold">CSS</span> and
           <span class="font-bold">JavaScript (Vue.js)</span>
         </p>
-        <button class="btn-primary mt-6">Hire him!</button>
+        <button class="btn-primary mt-6 font-bold">Hire him!</button>
       </section>
       <section class="content-section p-6 mt-10">
         <h3>Around 5 years of development experience</h3>

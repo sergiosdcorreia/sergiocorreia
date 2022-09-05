@@ -14,10 +14,22 @@ export default {
         return [];
       },
     },
+    collectionRef: {
+      type: String,
+      default: "",
+    },
+    collectionName: {
+      type: String,
+      default: "",
+    },
   },
   emits: ["complete"],
   setup(props, context) {
-    const { progress } = useStorage(props.file);
+    const { progress } = useStorage(
+      props.file,
+      props.collectionRef,
+      props.collectionName
+    );
 
     watchEffect(() => {
       if (progress.value >= 100) {
