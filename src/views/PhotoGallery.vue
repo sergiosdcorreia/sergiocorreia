@@ -2,10 +2,12 @@
   <h1 class="text-6xl font-bold" @click="showModal = true">
     This is the Photo Gallery page
   </h1>
-  <UploadForm
-    :collection-ref="collectionRef"
-    :collection-name="collectionName"
-  />
+  <div v-if="isLoggedIn">
+    <UploadForm
+      :collection-ref="collectionRef"
+      :collection-name="collectionName"
+    />
+  </div>
   <transition-group
     v-if="documents.length"
     tag="div"
@@ -25,20 +27,24 @@
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import GalleryList from "@/components/GalleryList.vue";
 import UploadForm from "@/components/UploadForm.vue";
 import Modal from "@/components/Modal.vue";
 import { useCollection } from "@/composables/useCollection";
+import { useStore } from "vuex";
 
 export default {
   name: "PhotoGallery",
   components: { UploadForm, GalleryList, Modal },
   setup() {
+    const store = useStore();
     const selectedImgUrl = ref(null);
     const collectionRef = "photos/";
     const collectionName = "photos";
-
+    const isLoggedIn = computed(() => {
+      return store.state.isLoggedIn;
+    });
     const updateSelectedImgUrl = (url) => {
       selectedImgUrl.value = url;
       console.log(selectedImgUrl);
@@ -52,6 +58,7 @@ export default {
       collectionRef,
       collectionName,
       updateSelectedImgUrl,
+      isLoggedIn,
     };
   },
 };

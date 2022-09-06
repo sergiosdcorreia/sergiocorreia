@@ -2,7 +2,7 @@
   <router-link :to="to" class="link" :class="{ active: isActive }">
     <font-awesome-icon :icon="icon" />
     <transition name="fade">
-      <span v-if="!collapsed">
+      <span v-if="!collapsed" class="pl-2">
         <slot />
       </span>
     </transition>

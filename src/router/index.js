@@ -1,13 +1,9 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import HomeView from "@/views/HomeView.vue";
-import CreatePost from "@/views/CreatePost.vue";
 import PhotoGallery from "@/views/PhotoGallery.vue";
 import DrawingGallery from "@/views/DrawingGallery.vue";
-import BlogView from "@/views/BlogView.vue";
 import Login from "@/views/Login.vue";
-import RegisterUser from "@/views/RegisterUser.vue";
-import ForgotPassword from "@/views/ForgotPassword.vue";
 
 const routes = [
   {
@@ -16,23 +12,6 @@ const routes = [
     component: HomeView,
     meta: {
       title: "Home",
-    },
-  },
-  {
-    path: "/blog",
-    name: "blog",
-    component: BlogView,
-    meta: {
-      title: "Blog",
-    },
-  },
-  {
-    path: "/create-post",
-    name: "createpost",
-    component: CreatePost,
-    meta: {
-      title: "Create Post",
-      requiresAuth: true,
     },
   },
   {
@@ -57,22 +36,6 @@ const routes = [
     component: Login,
     meta: {
       title: "Login",
-    },
-  },
-  {
-    path: "/register",
-    name: "register",
-    component: RegisterUser,
-    meta: {
-      title: "Register",
-    },
-  },
-  {
-    path: "/forgot-password",
-    name: "forgotpassword",
-    component: ForgotPassword,
-    meta: {
-      title: "Forgot Password",
     },
   },
   {

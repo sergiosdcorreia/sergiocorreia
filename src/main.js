@@ -9,25 +9,27 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
   faPenRuler,
   faRss,
-  faInfo,
+  faCircleInfo,
   faArrowRightToBracket,
   faAngleDoubleLeft,
   faCamera,
   faPenToSquare,
   faArrowRightFromBracket,
   faLocationDot,
+  faPencil,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faPenRuler,
   faCamera,
   faRss,
-  faInfo,
+  faCircleInfo,
   faArrowRightToBracket,
   faAngleDoubleLeft,
   faPenToSquare,
   faArrowRightFromBracket,
-  faLocationDot
+  faLocationDot,
+  faPencil
 );
 
 createApp(App)

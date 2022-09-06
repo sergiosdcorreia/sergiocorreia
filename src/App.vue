@@ -1,5 +1,5 @@
 <template>
-  <MainNav v-if="hasNavigation" />
+  <MainNav />
   <div class="app-container" :style="{ paddingLeft: sidebarWidth }">
     <router-view />
   </div>
@@ -14,30 +14,8 @@ export default {
   components: { MainNav },
   data() {
     return {
-      hasNavigation: null,
       sidebarWidth,
     };
-  },
-  watch: {
-    $route() {
-      this.checkRoute();
-    },
-  },
-  mounted() {
-    this.checkRoute();
-  },
-  methods: {
-    checkRoute() {
-      if (
-        this.$route.name === "login" ||
-        this.$route.name === "register" ||
-        this.$route.name === "forgotpassword"
-      ) {
-        this.hasNavigation = false;
-        return;
-      }
-      this.hasNavigation = true;
-    },
   },
 };
 </script>

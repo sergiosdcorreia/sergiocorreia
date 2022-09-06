@@ -7,45 +7,43 @@
     >
       <font-awesome-icon icon="fa-solid fa-angles-left" />
     </span>
-    <span v-if="collapsed"> SC </span>
-    <span v-else> Sergio Correia </span>
+    <div :class="{ 'nav-content-collapsed': collapsed }" class="mt-12">
+      <span v-if="collapsed" class="font-bold menu-title text-lg"> SC </span>
+      <span v-else class="pl-1 font-bold menu-title text-lg">
+        Sérgio Correia
+      </span>
 
-    <MainNavLink :to="{ name: 'home' }" icon="fa-solid fa-pen-ruler"
-      >Projects</MainNavLink
-    >
-    <MainNavLink :to="{ name: 'photogallery' }" icon="fa-solid fa-camera"
-      >Photo Gallery</MainNavLink
-    >
-    <MainNavLink :to="{ name: 'drawinggallery' }" icon="fa-solid fa-camera"
-      >Drawing Gallery</MainNavLink
-    >
-    <div v-if="isLoggedIn">
-      <MainNavLink :to="{ name: 'blog' }" icon="fa-solid fa-rss"
-        >Blog</MainNavLink
+      <MainNavLink :to="{ name: 'home' }" icon="fa-solid fa-pen-ruler">
+        Projects</MainNavLink
       >
-    </div>
-    <MainNavLink :to="{ name: 'about' }" icon="fa-solid fa-info"
-      >About</MainNavLink
-    >
-    <div v-if="isLoggedIn">
-      <MainNavLink :to="{ name: 'createpost' }" icon="fa-solid fa-pen-to-square"
-        >Create Post</MainNavLink
+      <MainNavLink :to="{ name: 'photogallery' }" icon="fa-solid fa-camera">
+        Photo Gallery</MainNavLink
       >
-      <button @click="logOutUser">
-        <font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" /> Log
-        Out
-      </button>
-    </div>
-    <div v-if="!isLoggedIn">
-      <MainNavLink
-        :to="{ name: 'login' }"
-        icon="fa-solid fa-arrow-right-to-bracket"
-        >Sign In</MainNavLink
+      <MainNavLink :to="{ name: 'drawinggallery' }" icon="fa-solid fa-pencil">
+        Drawing Gallery</MainNavLink
       >
+      <MainNavLink :to="{ name: 'about' }" icon="fa-solid fa-circle-info"
+        >About</MainNavLink
+      >
+      <div v-if="isLoggedIn">
+        <div v-if="collapsed">
+          <button @click="logOutUser">
+            <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" />
+          </button>
+        </div>
+        <button @click="logOutUser">
+          <font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" /> Log
+          Out
+        </button>
+      </div>
+      <div v-if="!isLoggedIn">
+        <MainNavLink
+          :to="{ name: 'login' }"
+          icon="fa-solid fa-arrow-right-to-bracket"
+          >Sign In</MainNavLink
+        >
+      </div>
     </div>
-    <button v-if="collapsed">
-      <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" />
-    </button>
   </nav>
 </template>
 
@@ -107,16 +105,27 @@ export default {
 
 .collapse-icon {
   position: absolute;
-  bottom: 1em;
-  padding: 0.75em;
-
+  top: 1em;
+  right: 0.5em;
+  padding: 0.25em;
   color: rgba(255, 255, 255, 0.7);
-
   transition: 0.2s linear;
+  cursor: pointer;
 }
 
 .rotate-180 {
   transform: rotate(180deg);
   transition: 0.2s linear;
+}
+
+.menu-title {
+  user-select: none;
+}
+
+.nav-content-collapsed {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>
