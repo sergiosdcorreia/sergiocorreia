@@ -1,6 +1,8 @@
 <template>
-  <h1 class="text-6xl font-bold" @click="showModal = true">
-    This is the Drawing Gallery page
+  <h1
+    class="title text-center pt-10 text-2xl md:text-6xl font-bold select-none"
+  >
+    drawing gallery
   </h1>
   <div v-if="isLoggedIn">
     <UploadForm
@@ -79,5 +81,9 @@ export default {
 }
 .grid-enter-active {
   transition: all 3s ease;
+}
+.title {
+  font-family: "Baloo 2", sans-serif;
+  color: var(--primary);
 }
 </style>

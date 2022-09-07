@@ -1,6 +1,8 @@
 <template>
-  <h1 class="text-6xl font-bold" @click="showModal = true">
-    This is the Photo Gallery page
+  <h1
+    class="title text-center pt-10 text-2xl md:text-6xl font-bold select-none"
+  >
+    photo gallery
   </h1>
   <div v-if="isLoggedIn">
     <UploadForm
@@ -13,7 +15,7 @@
     tag="div"
     name="grid"
     appear
-    class="img-grid"
+    class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 py-10 mx-3 md:mx-10"
   >
     <template v-for="document in documents" :key="document.id">
       <GalleryList :documents="document" @selected="updateSelectedImgUrl" />
@@ -79,5 +81,9 @@ export default {
 }
 .grid-enter-active {
   transition: all 3s ease;
+}
+.title {
+  font-family: "Baloo 2", sans-serif;
+  color: var(--primary);
 }
 </style>

@@ -8,8 +8,8 @@
       <font-awesome-icon icon="fa-solid fa-angles-left" />
     </span>
     <div :class="{ 'nav-content-collapsed': collapsed }" class="mt-12">
-      <span v-if="collapsed" class="font-bold menu-title text-lg"> SC </span>
-      <span v-else class="pl-1 font-bold menu-title text-lg">
+      <span v-if="collapsed" class="font-bold select-none text-lg"> SC </span>
+      <span v-else class="pl-1 font-bold select-none text-lg">
         Sérgio Correia
       </span>
 
@@ -116,10 +116,6 @@ export default {
 .rotate-180 {
   transform: rotate(180deg);
   transition: 0.2s linear;
-}
-
-.menu-title {
-  user-select: none;
 }
 
 .nav-content-collapsed {
