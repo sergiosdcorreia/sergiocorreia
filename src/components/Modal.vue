@@ -38,7 +38,7 @@ export default {
 
   img {
     display: block;
-    max-width: 60%;
+    max-width: 80%;
     max-height: 80%;
     margin: 60px auto;
     box-shadow: 3px 5px 7px rgba($color: #000000, $alpha: 0.5);

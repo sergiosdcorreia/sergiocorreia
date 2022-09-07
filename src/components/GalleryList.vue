@@ -40,7 +40,7 @@ export default {
     max-width: 180%;
     position: absolute;
     top: -70%;
-    left: -50%;
+    left: -40%;
     transform: translate(0, 50%);
   }
 }

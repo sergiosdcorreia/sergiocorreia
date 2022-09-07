@@ -15,7 +15,7 @@
     tag="div"
     name="grid"
     appear
-    class="img-grid"
+    class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 py-10 mx-3 md:mx-10"
   >
     <template v-for="document in documents" :key="document.id">
       <GalleryList :documents="document" @selected="updateSelectedImgUrl" />
@@ -67,12 +67,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.img-grid {
-  margin: 20px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
-}
 .grid-enter-from {
   opacity: 0;
 }

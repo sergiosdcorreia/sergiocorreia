@@ -67,12 +67,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.img-grid {
-  margin: 20px auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 40px;
-}
 .grid-enter-from {
   opacity: 0;
 }
