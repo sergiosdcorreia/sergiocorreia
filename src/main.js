@@ -17,6 +17,8 @@ import {
   faArrowRightFromBracket,
   faLocationDot,
   faPencil,
+  faEnvelope,
+  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -29,7 +31,9 @@ library.add(
   faPenToSquare,
   faArrowRightFromBracket,
   faLocationDot,
-  faPencil
+  faPencil,
+  faEnvelope,
+  faPhone
 );
 
 createApp(App)

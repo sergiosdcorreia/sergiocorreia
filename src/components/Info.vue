@@ -12,7 +12,7 @@
     </div>
     <div class="flex pt-6">
       <div class="icon-bg flex justify-center items-center mr-6">
-        <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
+        <font-awesome-icon class="icon" icon="fa-solid fa-envelope" />
       </div>
       <div class="flex flex-col justify-center">
         <p>Email</p>
@@ -21,7 +21,7 @@
     </div>
     <div class="flex pt-6">
       <div class="icon-bg flex justify-center items-center mr-6">
-        <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
+        <font-awesome-icon class="icon" icon="fa-solid fa-phone" />
       </div>
       <div class="flex flex-col justify-center">
         <p>Phone</p>
