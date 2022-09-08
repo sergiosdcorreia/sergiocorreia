@@ -6,7 +6,7 @@
       appear
       class="flex flex-col-reverse justify-start md:flex-row md:justify-between md:items-center"
     >
-      <template>
+      <div>
         <div>
           <h1 class="main-title font-bold text-5xl md:text-7xl select-none">
             sérgio correia
@@ -20,7 +20,7 @@
         >
           <img class="w-20 md:w-36" src="@/assets/images/SergioFoto200.png" />
         </div>
-      </template>
+      </div>
     </transition>
     <transition
       v-if="visible"
@@ -29,7 +29,7 @@
       appear
       class="flex flex-col md:flex-row"
     >
-      <template>
+      <div>
         <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
           <h3 class="text-center md:text-left">
             He loves development and design
@@ -58,7 +58,7 @@
             </template>
           </div>
         </div>
-      </template>
+      </div>
     </transition>
     <transition
       v-if="visible"
@@ -67,7 +67,7 @@
       appear
       class="flex flex-col-reverse md:flex-row"
     >
-      <template>
+      <div>
         <Info />
         <section class="content-section flex justify-around p-6 mt-10">
           <div class="flex flex-col">
@@ -79,7 +79,7 @@
             </div>
           </div>
         </section>
-      </template>
+      </div>
     </transition>
   </div>
 </template>
