@@ -15,7 +15,7 @@
     tag="div"
     name="grid"
     appear
-    class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-10 py-10 mx-3 md:mx-10"
+    class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-5 md:gap-10 py-10 mx-3 md:mx-10"
   >
     <template v-for="document in documents" :key="document.id">
       <GalleryList :documents="document" @selected="updateSelectedImgUrl" />
@@ -78,6 +78,6 @@ export default {
 }
 .title {
   font-family: "Baloo 2", sans-serif;
-  color: var(--primary);
+  color: var(--light-grey);
 }
 </style>

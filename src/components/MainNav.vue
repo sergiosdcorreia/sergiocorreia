@@ -12,36 +12,37 @@
       <span v-else class="pl-1 font-bold select-none text-lg">
         Sérgio Correia
       </span>
-
-      <MainNavLink :to="{ name: 'home' }" icon="fa-solid fa-pen-ruler">
-        Projects</MainNavLink
-      >
-      <MainNavLink :to="{ name: 'photogallery' }" icon="fa-solid fa-camera">
-        Photo Gallery</MainNavLink
-      >
-      <MainNavLink :to="{ name: 'drawinggallery' }" icon="fa-solid fa-pencil">
-        Drawing Gallery</MainNavLink
-      >
-      <MainNavLink :to="{ name: 'about' }" icon="fa-solid fa-circle-info"
-        >About</MainNavLink
-      >
-      <div v-if="isLoggedIn">
-        <div v-if="collapsed">
+      <div class="mt-2">
+        <MainNavLink :to="{ name: 'home' }" icon="fa-solid fa-home">
+          Home</MainNavLink
+        >
+        <MainNavLink :to="{ name: 'photogallery' }" icon="fa-solid fa-camera">
+          Photo Gallery</MainNavLink
+        >
+        <MainNavLink :to="{ name: 'drawinggallery' }" icon="fa-solid fa-pencil">
+          Drawing Gallery</MainNavLink
+        >
+        <MainNavLink :to="{ name: 'about' }" icon="fa-solid fa-circle-info"
+          >About</MainNavLink
+        >
+        <div v-if="isLoggedIn">
+          <div v-if="collapsed">
+            <button @click="logOutUser">
+              <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" />
+            </button>
+          </div>
           <button @click="logOutUser">
-            <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" />
+            <font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" />
+            Log Out
           </button>
         </div>
-        <button @click="logOutUser">
-          <font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" /> Log
-          Out
-        </button>
-      </div>
-      <div v-if="!isLoggedIn">
-        <MainNavLink
-          :to="{ name: 'login' }"
-          icon="fa-solid fa-arrow-right-to-bracket"
-          >Sign In</MainNavLink
-        >
+        <div v-if="!isLoggedIn">
+          <MainNavLink
+            :to="{ name: 'login' }"
+            icon="fa-solid fa-arrow-right-to-bracket"
+            >Sign In</MainNavLink
+          >
+        </div>
       </div>
     </div>
   </nav>

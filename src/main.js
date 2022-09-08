@@ -19,6 +19,7 @@ import {
   faPencil,
   faEnvelope,
   faPhone,
+  faHome,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -33,7 +34,8 @@ library.add(
   faLocationDot,
   faPencil,
   faEnvelope,
-  faPhone
+  faPhone,
+  faHome
 );
 
 createApp(App)
