@@ -1,5 +1,5 @@
 <template>
-  <div class="img-wrap" @click="handleClick(documents.url)">
+  <div class="img-wrap rounded-2xl" @click="handleClick(documents.url)">
     <img :src="documents.url" :alt="documents.name" />
   </div>
 </template>
