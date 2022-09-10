@@ -13,6 +13,116 @@
     >
       <div>
         <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
+          <h3 class="text-center md:text-left">He studied arts and crafts</h3>
+          <div class="flex flex-col xl:flex-row">
+            <p class="pt-4 mr-0 md:mr-10">
+              At high school he explored lots of drawing and painting techniches
+              as he wanted to become an architect or designer. There he also
+              studied history of art, geometry and math. He loved to paint with
+              acrylic, soft and oil pastels as well as watercolor paintings.
+            </p>
+            <div class="mt-4">
+              <img
+                class="mt-4 max-w-xs rounded-2xl"
+                src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2Fvieiradasilva.jpg?alt=media&token=763432e6-6cac-4ff9-ae60-fcad39a87def"
+              />
+              <span class="text-xs text-slate-400"
+                >Painting by Sérgio (Inspired by a painting by Maria Helena
+                Vieira da Silva)</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
+          <h3 class="text-center md:text-left">He studied architecture</h3>
+          <div class="flex flex-col xl:flex-row">
+            <p class="pt-4 mr-0 md:mr-10">
+              In 2004 he started studying architecture at ESAP (Escola Superior
+              Artistica do Porto) for 3 years. There he developed his drawing
+              skills, made lots of architectural mockups and learned CAD
+              software to create his architectural plans. He loves Luis
+              Barragan's gardens, the Schindler's house, japanese architecture
+              and it's culture of shadow.
+            </p>
+            <div>
+              <img
+                class="mt-4 max-w-xs rounded-2xl"
+                src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2Fschindler.jpg?alt=media&token=69d52678-6cd8-4373-acfc-3663eaa714cc"
+              />
+              <span class="text-xs text-slate-400"
+                >Schindler's house, LA, USA</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+  </div>
+  <div class="container mx-auto px-4">
+    <transition
+      name="content"
+      tag="section"
+      appear
+      class="flex flex-col md:flex-row"
+    >
+      <div>
+        <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
+          <h3 class="text-center md:text-left">He studied design</h3>
+          <div class="flex flex-col xl:flex-row">
+            <p class="pt-4 mr-0 md:mr-10">
+              In 2009 he started studying Design at ESAD Matosinhos (Escola
+              Superior de Arte e Design). There he improved his artistic skills
+              to another level especially in the areas of illustration, video
+              production, 2D and 3D animation, interior design, photography and
+              web design.
+            </p>
+            <div class="mt-4">
+              <YouTube
+                src="https://vimeo.com/71989292?embedded=true&source=vimeo_logo&owner=11688123"
+                width="320"
+                height="180"
+              />
+              <span class="text-xs text-slate-400"
+                >Painting by Sérgio (Inspired by a painting by Maria Helena
+                Vieira da Silva)</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
+          <h3 class="text-center md:text-left">He studied architecture</h3>
+          <div class="flex flex-col xl:flex-row">
+            <p class="pt-4 mr-0 md:mr-10">
+              In 2004 he started studying architecture at ESAP (Escola Superior
+              Artistica do Porto) for 3 years. There he developed his drawing
+              skills, made lots of architectural mockups and learned CAD
+              software to create his architectural plans. He loves Luis
+              Barragan's gardens, the Schindler's house, japanese architecture
+              and it's culture of shadow.
+            </p>
+            <div>
+              <img
+                class="mt-4 max-w-xs rounded-2xl"
+                src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2Fschindler.jpg?alt=media&token=69d52678-6cd8-4373-acfc-3663eaa714cc"
+              />
+              <span class="text-xs text-slate-400"
+                >Schindler's house, LA, USA</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </transition>
+  </div>
+  <div class="container mx-auto px-4">
+    <transition
+      name="content"
+      tag="section"
+      appear
+      class="flex flex-col md:flex-row"
+    >
+      <div>
+        <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
           <h3 class="text-center md:text-left">He plays the piano</h3>
           <div class="flex flex-col xl:flex-row">
             <p class="pt-4 mr-0 md:mr-10">
@@ -29,7 +139,7 @@
                 height="180"
               />
               <span class="text-xs text-slate-400"
-                >Sérgio playing at an academy concert (piano on the left)</span
+                >Sérgio playing at the academy concert (piano on the left)</span
               >
             </div>
           </div>
@@ -41,7 +151,8 @@
               Since 2015 one of his hobbies has been dancing Lindy Hop. He
               started in Porto at Hop Dance Studio. In 2017 he moved to Exeter,
               in England, where he continued to dance with the South West Lindy
-              Hoppers.
+              Hoppers. He loves the swing music and all the vintage culture
+              surrounding.
             </p>
             <div>
               <img
