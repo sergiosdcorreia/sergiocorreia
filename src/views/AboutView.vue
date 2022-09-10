@@ -25,8 +25,7 @@
                 src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2Fvieiradasilva.jpg?alt=media&token=763432e6-6cac-4ff9-ae60-fcad39a87def"
               />
               <span class="text-xs text-slate-400"
-                >Painting by Sérgio (Inspired by a painting by Helena Vieira da
-                Silva)</span
+                >Painting by Sérgio (Inspired by Helena Vieira da Silva)</span
               >
             </div>
           </div>
