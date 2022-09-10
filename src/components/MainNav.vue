@@ -25,24 +25,6 @@
         <MainNavLink :to="{ name: 'about' }" icon="fa-solid fa-circle-info"
           >About</MainNavLink
         >
-        <div v-if="isLoggedIn">
-          <div v-if="collapsed">
-            <button @click="logOutUser">
-              <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" />
-            </button>
-          </div>
-          <button @click="logOutUser">
-            <font-awesome-icon icon="fa-solid fa-arrow-right-from-bracket" />
-            Log Out
-          </button>
-        </div>
-        <div v-if="!isLoggedIn">
-          <MainNavLink
-            :to="{ name: 'login' }"
-            icon="fa-solid fa-arrow-right-to-bracket"
-            >Sign In</MainNavLink
-          >
-        </div>
       </div>
     </div>
   </nav>

@@ -10,7 +10,7 @@
       class="flex flex-col md:flex-row"
     >
       <div>
-        <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
+        <div class="content-section w-full md:w-50 p-6 mt-10 md:mr-10">
           <h3 class="text-center md:text-left">He studied arts and crafts</h3>
           <div class="flex flex-col xl:flex-row">
             <p class="pt-4 mr-0 md:mr-10">
@@ -21,7 +21,7 @@
             </p>
             <div class="mt-4">
               <img
-                class="mt-4 max-w-xs rounded-2xl"
+                class="mt-4 max-w-[260px] md:max-w-xs rounded-2xl"
                 src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2Fvieiradasilva.jpg?alt=media&token=763432e6-6cac-4ff9-ae60-fcad39a87def"
               />
               <span class="text-xs text-slate-400"
@@ -31,7 +31,7 @@
             </div>
           </div>
         </div>
-        <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
+        <div class="content-section w-full md:w-50 p-6 mt-10 md:mr-10">
           <h3 class="text-center md:text-left">He studied architecture</h3>
           <div class="flex flex-col xl:flex-row">
             <p class="pt-4 mr-0 md:mr-10">
@@ -44,7 +44,7 @@
             </p>
             <div>
               <img
-                class="mt-4 max-w-xs rounded-2xl"
+                class="mt-4 max-w-[260px] md:max-w-xs rounded-2xl"
                 src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2Fschindler.jpg?alt=media&token=69d52678-6cd8-4373-acfc-3663eaa714cc"
               />
               <span class="text-xs text-slate-400"
@@ -64,7 +64,7 @@
       class="flex flex-col md:flex-row"
     >
       <div>
-        <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
+        <div class="content-section w-full md:w-50 p-6 mt-10 md:mr-10">
           <h3 class="text-center md:text-left">He studied design</h3>
           <div class="flex flex-col xl:flex-row">
             <p class="pt-4 mr-0 md:mr-10">
@@ -75,20 +75,31 @@
               web design.
             </p>
             <div class="mt-4">
-              <vimeo-player
-                ref="player"
-                :video-id="videoID"
-                :player-height="height"
-                :player-width="width"
-                @ready="onReady"
-              />
+              <div class="hidden md:block">
+                <vimeo-player
+                  ref="player"
+                  :video-id="videoID"
+                  :player-height="height"
+                  :player-width="width"
+                  @ready="onReady"
+                />
+              </div>
+              <div class="md:hidden">
+                <vimeo-player
+                  ref="player"
+                  :video-id="videoID"
+                  :player-height="200"
+                  :player-width="250"
+                  @ready="onReady"
+                />
+              </div>
               <span class="text-xs text-slate-400"
                 >3D animation by Sérgio (Pinscreen technique) | ESAD</span
               >
             </div>
           </div>
         </div>
-        <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
+        <div class="content-section w-full md:w-50 p-6 mt-10 md:mr-10">
           <h3 class="text-center md:text-left">He studied programming</h3>
           <div class="flex flex-col xl:flex-row">
             <p class="pt-4 mr-0 md:mr-10">
@@ -101,7 +112,7 @@
             </p>
             <div>
               <img
-                class="mt-4 max-w-xs rounded-2xl"
+                class="mt-4 max-w-[260px] md:max-w-xs rounded-2xl"
                 src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2Fprogramming.jpg?alt=media&token=915afe96-ad94-4677-b608-bb0a6a136968"
               />
               <span class="text-xs text-slate-400"
@@ -113,7 +124,7 @@
       </div>
     </transition>
   </div>
-  <div class="container mx-auto px-4 pb-10">
+  <div class="container mx-auto px-4">
     <transition
       name="content"
       tag="section"
@@ -121,7 +132,7 @@
       class="flex flex-col md:flex-row"
     >
       <div>
-        <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
+        <div class="content-section w-full md:w-50 p-6 mt-10 md:mr-10">
           <h3 class="text-center md:text-left">He plays the piano</h3>
           <div class="flex flex-col xl:flex-row">
             <p class="pt-4 mr-0 md:mr-10">
@@ -132,18 +143,27 @@
               designer for this academy in exchange for classes.
             </p>
             <div class="mt-4">
-              <YouTube
-                src="https://www.youtube.com/watch?v=BTSzGy3F62A"
-                width="320"
-                height="180"
-              />
+              <div class="hidden md:block">
+                <YouTube
+                  src="https://www.youtube.com/watch?v=BTSzGy3F62A"
+                  width="320"
+                  height="180"
+                />
+              </div>
+              <div class="md:hidden">
+                <YouTube
+                  src="https://www.youtube.com/watch?v=BTSzGy3F62A"
+                  width="250"
+                  height="150"
+                />
+              </div>
               <span class="text-xs text-slate-400"
                 >Sérgio playing at the academy concert (piano on the left)</span
               >
             </div>
           </div>
         </div>
-        <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
+        <div class="content-section w-full md:w-50 p-6 mt-10 md:mr-10">
           <h3 class="text-center md:text-left">He loves to dance</h3>
           <div class="flex flex-col xl:flex-row">
             <p class="pt-4 mr-0 md:mr-10">
@@ -155,7 +175,7 @@
             </p>
             <div>
               <img
-                class="mt-4 max-w-xs rounded-2xl"
+                class="mt-4 max-w-[260px] md:max-w-xs rounded-2xl"
                 src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2FLindy_on_beach.png?alt=media&token=60f0d836-f5c6-4cfc-bb4a-fefe81ed0eae"
               />
               <span class="text-xs text-slate-400"
@@ -180,7 +200,7 @@
       class="flex flex-col md:flex-row"
     >
       <div>
-        <div class="content-section w-full p-6 mt-10 mr-10">
+        <div class="content-section w-full p-6 mt-10 md:mr-10">
           <h3 class="text-center md:text-left">About the website</h3>
           <p class="pt-4 mr-0 md:mr-10">
             Developed and designed by Sérgio Correia using the Vue 3 framework,
@@ -198,7 +218,7 @@ export default {
   data() {
     return {
       videoID: "71989292",
-      height: 180,
+      height: 250,
       width: 320,
       options: {
         muted: true,
