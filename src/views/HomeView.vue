@@ -46,20 +46,22 @@
             <span class="font-bold">JavaScript (Vue.js)</span> he's happy to
             help!
           </p>
-          <button class="btn-primary mt-6 font-bold">Hire him!</button>
-          <a
-            href="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/files%2FCV_SergioCorreia_2022.pdf?alt=media&token=fea6db60-fb72-4290-b780-316393ad52a7"
-            class="btn-secondary inline-block ml-4 mt-6 font-bold"
-            target="blank"
-          >
-            Download CV
-          </a>
-          <a
-            href="https://github.com/sergiosdcorreia"
-            class="btn-secondary inline-block ml-4 mt-6 font-bold"
-          >
-            GitHub Repository
-          </a>
+          <div class="flex flex-col md:flex-row">
+            <button class="btn-primary mt-6 font-bold">Hire him!</button>
+            <a
+              href="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/files%2FCV_SergioCorreia_2022.pdf?alt=media&token=fea6db60-fb72-4290-b780-316393ad52a7"
+              class="btn-secondary text-center inline-block md:ml-4 mt-6 font-bold"
+              target="blank"
+            >
+              Download CV
+            </a>
+            <a
+              href="https://github.com/sergiosdcorreia"
+              class="btn-secondary text-center inline-block md:ml-4 mt-6 font-bold"
+            >
+              GitHub Repository
+            </a>
+          </div>
         </div>
         <div class="content-section p-6 mt-10">
           <h3 class="text-center md:text-left">

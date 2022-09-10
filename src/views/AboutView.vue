@@ -25,8 +25,8 @@
                 src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2Fvieiradasilva.jpg?alt=media&token=763432e6-6cac-4ff9-ae60-fcad39a87def"
               />
               <span class="text-xs text-slate-400"
-                >Painting by Sérgio (Inspired by a painting by Maria Helena
-                Vieira da Silva)</span
+                >Painting by Sérgio (Inspired by a painting by Helena Vieira da
+                Silva)</span
               >
             </div>
           </div>
@@ -168,6 +168,25 @@
               >
             </div>
           </div>
+        </div>
+      </div>
+    </transition>
+  </div>
+  <div class="container mx-auto px-4 pb-10">
+    <transition
+      name="content"
+      tag="section"
+      appear
+      class="flex flex-col md:flex-row"
+    >
+      <div>
+        <div class="content-section w-full p-6 mt-10 mr-10">
+          <h3 class="text-center md:text-left">About the website</h3>
+          <p class="pt-4 mr-0 md:mr-10">
+            Developed and designed by Sérgio Correia using the Vue 3 framework,
+            Tailwind CSS and Firebase.
+          </p>
+          <p class="text-xs pt-3">© Sérgio Correia 2022</p>
         </div>
       </div>
     </transition>

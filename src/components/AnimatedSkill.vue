@@ -46,7 +46,6 @@ function skillCounter() {
       animatedSkill.value = counter;
     }
   }, props.skills.speed);
-  console.log(props.skills.offset);
 }
 
 onMounted(skillCounter);
