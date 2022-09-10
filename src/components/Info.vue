@@ -28,28 +28,6 @@
         <p class="font-bold">(+44) 7462 184484</p>
       </div>
     </div>
-    <a href="https://github.com/sergiosdcorreia">
-      <div class="flex pt-6">
-        <div class="icon-bg flex justify-center items-center mr-6">
-          <font-awesome-icon class="icon" icon="fa-solid fa-phone" />
-        </div>
-        <div class="flex flex-col justify-center">
-          <p>GitHub</p>
-          <p class="font-bold">github.com/sergiosdcorreia</p>
-        </div>
-      </div>
-    </a>
-    <a href="https://www.linkedin.com/in/sergiocorreiadeveloper/">
-      <div class="flex pt-6">
-        <div class="icon-bg flex justify-center items-center mr-6">
-          <font-awesome-icon class="icon" icon="fa-solid fa-phone" />
-        </div>
-        <div class="flex flex-col justify-center">
-          <p>LinkedIn</p>
-          <p class="font-bold">linkedin.com/in/sergiocorreiadeveloper/</p>
-        </div>
-      </div>
-    </a>
   </section>
 </template>
 
