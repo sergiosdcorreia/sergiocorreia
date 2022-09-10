@@ -142,20 +142,11 @@
               designer for this academy in exchange for classes.
             </p>
             <div class="mt-4">
-              <div class="hidden md:block">
-                <YouTube
-                  src="https://www.youtube.com/watch?v=BTSzGy3F62A"
-                  width="320"
-                  height="180"
-                />
-              </div>
-              <div class="md:hidden">
-                <YouTube
-                  src="https://www.youtube.com/watch?v=BTSzGy3F62A"
-                  width="250"
-                  height="150"
-                />
-              </div>
+              <YouTube
+                src="https://www.youtube.com/watch?v=BTSzGy3F62A"
+                :width="ytWidth"
+                :height="ytHeight"
+              />
               <span class="text-xs text-slate-400"
                 >Sérgio playing at the academy concert (piano on the left)</span
               >
@@ -224,7 +215,13 @@ export default {
         autoplay: true,
       },
       playerReady: false,
+      windowWidth: null,
+      ytWidth: "",
+      ytHeight: "",
     };
+  },
+  mounted() {
+    window.addEventListener("resize", this.getDimentions);
   },
   methods: {
     onReady() {
@@ -235,6 +232,17 @@ export default {
     },
     pause() {
       this.$refs.player.pause();
+    },
+    getDimensions() {
+      this.windowWidth = document.documentElement.clientWidth;
+
+      if (this.windowWidth >= 768) {
+        this.ytWidth = 320;
+        this.ytHeight = 180;
+      } else {
+        this.ytWidth = 250;
+        this.ytHeight = 150;
+      }
     },
   },
 };
