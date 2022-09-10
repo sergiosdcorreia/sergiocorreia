@@ -14,10 +14,10 @@
           <h3 class="text-center md:text-left">He studied arts and crafts</h3>
           <div class="flex flex-col xl:flex-row">
             <p class="pt-4 mr-0 md:mr-10">
-              At high school he explored lots of drawing and painting techniches
-              as he wanted to become an architect or designer. There he also
-              studied history of art, geometry and math. He loved to paint with
-              acrylic, soft and oil pastels as well as watercolor paintings.
+              At high school he explored lots of drawing and painting
+              techniches. There he also studied history of art, geometry and
+              math. He loved to paint with acrylic, soft and oil pastels as well
+              as watercolor paintings.
             </p>
             <div class="mt-4">
               <img
