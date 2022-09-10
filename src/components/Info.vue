@@ -1,5 +1,5 @@
 <template>
-  <section class="content-section p-6 mt-10 mr-10 w-full md:w-auto">
+  <section class="content-section p-6 my-10 mr-10 w-full md:w-auto">
     <h3 class="text-center md:text-left">Where you can find him</h3>
     <div class="flex pt-6">
       <div class="icon-bg flex justify-center items-center mr-6">
@@ -28,6 +28,28 @@
         <p class="font-bold">(+44) 7462 184484</p>
       </div>
     </div>
+    <a href="https://github.com/sergiosdcorreia">
+      <div class="flex pt-6">
+        <div class="icon-bg flex justify-center items-center mr-6">
+          <font-awesome-icon class="icon" icon="fa-solid fa-phone" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <p>GitHub</p>
+          <p class="font-bold">github.com/sergiosdcorreia</p>
+        </div>
+      </div>
+    </a>
+    <a href="https://www.linkedin.com/in/sergiocorreiadeveloper/">
+      <div class="flex pt-6">
+        <div class="icon-bg flex justify-center items-center mr-6">
+          <font-awesome-icon class="icon" icon="fa-solid fa-phone" />
+        </div>
+        <div class="flex flex-col justify-center">
+          <p>LinkedIn</p>
+          <p class="font-bold">linkedin.com/in/sergiocorreiadeveloper/</p>
+        </div>
+      </div>
+    </a>
   </section>
 </template>
 

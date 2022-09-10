@@ -1,10 +1,8 @@
 <template>
-  <h1
-    class="title text-center pt-10 text-2xl md:text-6xl font-bold select-none"
-  >
-    about
-  </h1>
   <div class="container mx-auto px-4">
+    <h1 class="title pt-10 text-2xl md:text-6xl font-bold select-none">
+      about
+    </h1>
     <transition
       name="content"
       tag="section"
@@ -77,36 +75,37 @@
               web design.
             </p>
             <div class="mt-4">
-              <YouTube
-                src="https://vimeo.com/71989292?embedded=true&source=vimeo_logo&owner=11688123"
-                width="320"
-                height="180"
+              <vimeo-player
+                ref="player"
+                :video-id="videoID"
+                :player-height="height"
+                :player-width="width"
+                @ready="onReady"
               />
               <span class="text-xs text-slate-400"
-                >Painting by Sérgio (Inspired by a painting by Maria Helena
-                Vieira da Silva)</span
+                >3D animation by Sérgio (Pinscreen technique) | ESAD</span
               >
             </div>
           </div>
         </div>
         <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
-          <h3 class="text-center md:text-left">He studied architecture</h3>
+          <h3 class="text-center md:text-left">He studied programming</h3>
           <div class="flex flex-col xl:flex-row">
             <p class="pt-4 mr-0 md:mr-10">
-              In 2004 he started studying architecture at ESAP (Escola Superior
-              Artistica do Porto) for 3 years. There he developed his drawing
-              skills, made lots of architectural mockups and learned CAD
-              software to create his architectural plans. He loves Luis
-              Barragan's gardens, the Schindler's house, japanese architecture
-              and it's culture of shadow.
+              In 2015 he had Web Design classes at ESAD Matosinhos where he was
+              introduced on a basic level to programming languages like HTML,
+              CSS and JavaScript. He enjoyed the hability of creating content
+              and be able to layout websites for the web. Since then he has been
+              studying through online courses from websites like Udemy and
+              Frontend Masters.
             </p>
             <div>
               <img
                 class="mt-4 max-w-xs rounded-2xl"
-                src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2Fschindler.jpg?alt=media&token=69d52678-6cd8-4373-acfc-3663eaa714cc"
+                src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2Fprogramming.jpg?alt=media&token=915afe96-ad94-4677-b608-bb0a6a136968"
               />
               <span class="text-xs text-slate-400"
-                >Schindler's house, LA, USA</span
+                >BelayCords Web Design and Development project | ESAD</span
               >
             </div>
           </div>
@@ -114,7 +113,7 @@
       </div>
     </transition>
   </div>
-  <div class="container mx-auto px-4">
+  <div class="container mx-auto px-4 pb-10">
     <transition
       name="content"
       tag="section"
@@ -129,8 +128,8 @@
               Since he was 10 years old he started to learn piano at a Music
               Academy. He knows how to read sheet music and plays just for fun.
               He started by learning the classics and know he enjoys playing
-              music of his favourite bands. He also worked as a designer for
-              this academy in exchange for classes.
+              music of his favourite bands. Later he also worked as a freelance
+              designer for this academy in exchange for classes.
             </p>
             <div class="mt-4">
               <YouTube
@@ -177,6 +176,29 @@
 <script>
 export default {
   name: "AboutView",
+  data() {
+    return {
+      videoID: "71989292",
+      height: 180,
+      width: 320,
+      options: {
+        muted: true,
+        autoplay: true,
+      },
+      playerReady: false,
+    };
+  },
+  methods: {
+    onReady() {
+      this.playerReady = true;
+    },
+    play() {
+      this.$refs.player.play();
+    },
+    pause() {
+      this.$refs.player.pause();
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

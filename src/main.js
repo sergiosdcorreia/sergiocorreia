@@ -5,6 +5,7 @@ import "@/assets/global.css";
 import router from "@/router";
 import store from "@/store";
 import YouTube from "vue3-youtube";
+import vueVimeoPlayer from "vue-vimeo-player";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
@@ -42,6 +43,7 @@ library.add(
 createApp(App)
   .component("font-awesome-icon", FontAwesomeIcon)
   .component("YouTube", YouTube)
+  .use(vueVimeoPlayer)
   .use(store)
   .use(router)
   .mount("#app");

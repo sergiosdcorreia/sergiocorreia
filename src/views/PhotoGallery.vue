@@ -1,7 +1,5 @@
 <template>
-  <h1
-    class="title text-center pt-10 text-2xl md:text-6xl font-bold select-none"
-  >
+  <h1 class="title pt-10 px-10 text-2xl md:text-6xl font-bold select-none">
     photo gallery
   </h1>
   <div v-if="isLoggedIn">
