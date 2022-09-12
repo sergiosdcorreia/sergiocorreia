@@ -210,8 +210,6 @@
         </div>
       </div>
     </transition>
-    <p>{{ windowWidth }}</p>
-    <p>{{ windowHeight }}</p>
   </div>
 </template>
 <script>
