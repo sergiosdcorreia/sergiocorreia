@@ -200,6 +200,8 @@
         </div>
       </div>
     </transition>
+    <p>{{ windowWidth }}</p>
+    <p>{{ windowHeight }}</p>
   </div>
 </template>
 <script>
@@ -215,13 +217,17 @@ export default {
         autoplay: true,
       },
       playerReady: false,
-      windowWidth: null,
+      windowWidth: 0,
+      windowHeight: 0,
       ytWidth: "",
       ytHeight: "",
     };
   },
   mounted() {
     window.addEventListener("resize", this.getDimentions);
+  },
+  unmounted() {
+    window.removeEventListener("resize", this.getDimentions);
   },
   methods: {
     onReady() {
@@ -233,15 +239,18 @@ export default {
     pause() {
       this.$refs.player.pause();
     },
-    getDimensions() {
-      this.windowWidth = document.documentElement.clientWidth;
+    getDimensions(e) {
+      this.windowHeight = e.target.innerHeight;
+      this.windowWidth = e.target.innerWidth;
 
-      if (this.windowWidth >= 768) {
+      if (e.target.innerWidth > 768) {
         this.ytWidth = 320;
         this.ytHeight = 180;
+        console.log("desktop");
       } else {
-        this.ytWidth = 250;
-        this.ytHeight = 150;
+        this.ytWidth = 200;
+        this.ytHeight = 100;
+        console.log("mobile");
       }
     },
   },
