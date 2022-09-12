@@ -19,8 +19,8 @@
         <MainNavLink :to="{ name: 'photogallery' }" icon="fa-solid fa-camera">
           Photo Gallery</MainNavLink
         >
-        <MainNavLink :to="{ name: 'drawinggallery' }" icon="fa-solid fa-pencil">
-          Drawing Gallery</MainNavLink
+        <MainNavLink :to="{ name: 'artgallery' }" icon="fa-solid fa-pencil">
+          Art Gallery</MainNavLink
         >
         <MainNavLink :to="{ name: 'about' }" icon="fa-solid fa-circle-info"
           >About</MainNavLink

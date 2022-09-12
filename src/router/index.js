@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import HomeView from "@/views/HomeView.vue";
 import PhotoGallery from "@/views/PhotoGallery.vue";
-import DrawingGallery from "@/views/DrawingGallery.vue";
+import ArtGallery from "@/views/ArtGallery.vue";
 import Login from "@/views/Login.vue";
 
 const routes = [
@@ -23,11 +23,11 @@ const routes = [
     },
   },
   {
-    path: "/drawing-gallery",
-    name: "drawinggallery",
-    component: DrawingGallery,
+    path: "/art-gallery",
+    name: "artgallery",
+    component: ArtGallery,
     meta: {
-      title: "Drawing Gallery",
+      title: "Art Gallery",
     },
   },
   {

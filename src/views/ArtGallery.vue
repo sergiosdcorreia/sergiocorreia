@@ -1,6 +1,6 @@
 <template>
   <h1 class="title pt-10 px-10 text-2xl md:text-6xl font-bold select-none">
-    drawing gallery
+    art gallery
   </h1>
   <div v-if="isLoggedIn">
     <UploadForm
@@ -35,7 +35,7 @@ import { useCollection } from "@/composables/useCollection";
 import { useStore } from "vuex";
 
 export default {
-  name: "PhotoGallery",
+  name: "ArtGallery",
   components: { UploadForm, GalleryList, Modal },
   setup() {
     const store = useStore();
