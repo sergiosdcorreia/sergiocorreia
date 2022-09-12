@@ -47,7 +47,7 @@
                 src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2Fschindler.jpg?alt=media&token=69d52678-6cd8-4373-acfc-3663eaa714cc"
               />
               <span class="text-xs text-slate-400"
-                >Schindler's house, LA, USA</span
+                >Schindler's house, LA, USA by Rudolph Schindler</span
               >
             </div>
           </div>
@@ -93,7 +93,7 @@
                 />
               </div>
               <span class="text-xs text-slate-400"
-                >3D animation by Sérgio (Pinscreen technique) | ESAD</span
+                >3D animation (Pinscreen technique) | ESAD</span
               >
             </div>
           </div>
@@ -148,7 +148,8 @@
                 :height="ytHeight"
               />
               <span class="text-xs text-slate-400"
-                >Sérgio playing at the academy concert (piano on the left)</span
+                >Playing at the academy's annual concert (piano on the
+                left)</span
               >
             </div>
           </div>
@@ -169,7 +170,7 @@
                 src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2FLindy_on_beach.png?alt=media&token=60f0d836-f5c6-4cfc-bb4a-fefe81ed0eae"
               />
               <span class="text-xs text-slate-400"
-                >Yulia and Sérgio | Photo by
+                >Yulia and Sérgio dancing | Photo by
                 <a
                   class="font-bold"
                   href="https://www.instagram.com/yuliaw____/"
@@ -196,7 +197,16 @@
             Developed and designed by Sérgio Correia using the Vue 3 framework,
             Tailwind CSS and Firebase.
           </p>
-          <p class="text-xs pt-3">© Sérgio Correia 2022</p>
+          <p>
+            Check the website's repository
+            <a
+              href="https://github.com/sergiosdcorreia/sergiocorreia"
+              target="blank"
+              class="font-bold"
+              >here</a
+            >.
+          </p>
+          <p class="text-xs pt-4">© Sérgio Correia 2022</p>
         </div>
       </div>
     </transition>
