@@ -17,11 +17,11 @@
               At high school he explored lots of drawing and painting
               techniches. There he also studied history of art, geometry and
               math. He loved to paint with acrylic, soft and oil pastels as well
-              as watercolor paintings.
+              as watercolors.
             </p>
             <div class="mt-4">
               <img
-                class="mt-4 max-w-[260px] md:max-w-xs rounded-2xl"
+                class="max-w-[260px] md:max-w-xs rounded-2xl"
                 src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2Fvieiradasilva.jpg?alt=media&token=763432e6-6cac-4ff9-ae60-fcad39a87def"
               />
               <span class="text-xs text-slate-400"
