@@ -170,7 +170,7 @@
                 src="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/about%2FLindy_on_beach.png?alt=media&token=60f0d836-f5c6-4cfc-bb4a-fefe81ed0eae"
               />
               <span class="text-xs text-slate-400"
-                >Yulia and Sérgio dancing | Photo by
+                >Dancing with Yulia | Photo by
                 <a
                   class="font-bold"
                   href="https://www.instagram.com/yuliaw____/"
