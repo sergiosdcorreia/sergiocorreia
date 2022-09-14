@@ -37,7 +37,7 @@
           <span class="text-xs text-slate-400">{{ about.caption }}</span>
         </div>
       </div>
-      <div v-if="about.videoUrl">
+      <div v-if="about.videoUrl" class="mt-4">
         <YouTube :src="about.videoUrl" width="250" height="200" />
         <span class="text-xs text-slate-400">{{ about.caption }}</span
         ><a class="text-xs text-slate-400 font-bold" :href="about.captionHref"
