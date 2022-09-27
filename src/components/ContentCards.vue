@@ -1,47 +1,50 @@
 <template>
   <div class="content-section w-full md:w-50 p-6 mt-10 md:mr-10">
-    <h3 class="text-center md:text-left">{{ about.title }}</h3>
+    <div v-if="content.logo">
+      <img class="w-16 mb-3" :src="content.logo" />
+    </div>
+    <h3 class="text-center md:text-left">{{ content.title }}</h3>
     <div class="flex flex-col xl:flex-row">
       <p class="py-4 mr-0 md:mr-10">
-        {{ about.text }}
+        {{ content.text }}
       </p>
-      <div v-if="about.imageUrl">
+      <div v-if="content.imageUrl">
         <img
           class="mt-4 max-w-[260px] md:max-w-xs rounded-2xl"
-          :src="about.imageUrl"
+          :src="content.imageUrl"
         />
-        <span class="text-xs text-slate-400">{{ about.caption }}</span>
-        <a class="text-xs text-slate-400 font-bold" :href="about.captionHref">
-          &nbsp;{{ about.captionAnchor }}</a
+        <span class="text-xs text-slate-400">{{ content.caption }}</span>
+        <a class="text-xs text-slate-400 font-bold" :href="content.captionHref">
+          &nbsp;{{ content.captionAnchor }}</a
         >
       </div>
-      <div v-if="about.videoId" class="mt-4">
+      <div v-if="content.videoId" class="mt-4">
         <div class="hidden md:block">
           <vimeo-player
             ref="player"
-            :video-id="about.videoId"
+            :video-id="content.videoId"
             :player-height="250"
             :player-width="320"
             @ready="onReady"
           />
-          <span class="text-xs text-slate-400">{{ about.caption }}</span>
+          <span class="text-xs text-slate-400">{{ content.caption }}</span>
         </div>
         <div class="md:hidden">
           <vimeo-player
             ref="player"
-            :video-id="about.videoId"
+            :video-id="content.videoId"
             :player-height="200"
             :player-width="250"
             @ready="onReady"
           />
-          <span class="text-xs text-slate-400">{{ about.caption }}</span>
+          <span class="text-xs text-slate-400">{{ content.caption }}</span>
         </div>
       </div>
-      <div v-if="about.videoUrl" class="mt-4">
-        <YouTube :src="about.videoUrl" width="250" height="200" />
-        <span class="text-xs text-slate-400">{{ about.caption }}</span
-        ><a class="text-xs text-slate-400 font-bold" :href="about.captionHref"
-          >&nbsp;{{ about.captionAnchor }}</a
+      <div v-if="content.videoUrl" class="mt-4">
+        <YouTube :src="content.videoUrl" width="250" height="200" />
+        <span class="text-xs text-slate-400">{{ content.caption }}</span
+        ><a class="text-xs text-slate-400 font-bold" :href="content.captionHref"
+          >&nbsp;{{ content.captionAnchor }}</a
         >
       </div>
     </div>
@@ -52,7 +55,7 @@
 import { ref } from "vue";
 
 defineProps({
-  about: {
+  content: {
     type: Array,
     default() {
       return [];

@@ -1,29 +1,31 @@
 <template>
-  <h1 class="title pt-10 px-10 text-2xl md:text-6xl font-bold select-none">
-    photo gallery
-  </h1>
-  <div v-if="isLoggedIn">
-    <UploadForm
-      :collection-ref="collectionRef"
-      :collection-name="collectionName"
+  <div class="container mx-auto py-10 px-4">
+    <h1 class="title text-2xl md:text-6xl font-bold select-none">
+      photo gallery
+    </h1>
+    <div v-if="isLoggedIn">
+      <UploadForm
+        :collection-ref="collectionRef"
+        :collection-name="collectionName"
+      />
+    </div>
+    <transition-group
+      v-if="documents.length"
+      tag="div"
+      name="grid"
+      appear
+      class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-5 md:gap-10 py-10"
+    >
+      <template v-for="document in documents" :key="document.id">
+        <GalleryList :documents="document" @selected="updateSelectedImgUrl" />
+      </template>
+    </transition-group>
+    <Modal
+      v-if="selectedImgUrl"
+      :img-url="selectedImgUrl"
+      @close="updateSelectedImgUrl"
     />
   </div>
-  <transition-group
-    v-if="documents.length"
-    tag="div"
-    name="grid"
-    appear
-    class="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-5 md:gap-10 py-10 mx-3 md:mx-10"
-  >
-    <template v-for="document in documents" :key="document.id">
-      <GalleryList :documents="document" @selected="updateSelectedImgUrl" />
-    </template>
-  </transition-group>
-  <Modal
-    v-if="selectedImgUrl"
-    :img-url="selectedImgUrl"
-    @close="updateSelectedImgUrl"
-  />
 </template>
 
 <script>
