@@ -16,6 +16,9 @@
         <MainNavLink :to="{ name: 'home' }" icon="fa-solid fa-home">
           Home</MainNavLink
         >
+        <MainNavLink :to="{ name: 'achievements' }" icon="fa-solid fa-medal">
+          Achievements</MainNavLink
+        >
         <MainNavLink :to="{ name: 'photogallery' }" icon="fa-solid fa-camera">
           Photo Gallery</MainNavLink
         >

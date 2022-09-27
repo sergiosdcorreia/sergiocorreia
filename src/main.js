@@ -22,6 +22,7 @@ import {
   faEnvelope,
   faPhone,
   faHome,
+  faMedal,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -37,7 +38,8 @@ library.add(
   faPencil,
   faEnvelope,
   faPhone,
-  faHome
+  faHome,
+  faMedal
 );
 
 createApp(App)

@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import HomeView from "@/views/HomeView.vue";
+import Achievements from "@/views/Achievements.vue";
 import PhotoGallery from "@/views/PhotoGallery.vue";
 import ArtGallery from "@/views/ArtGallery.vue";
 import Login from "@/views/Login.vue";
@@ -12,6 +13,14 @@ const routes = [
     component: HomeView,
     meta: {
       title: "Home",
+    },
+  },
+  {
+    path: "/achievements",
+    name: "achievements",
+    component: Achievements,
+    meta: {
+      title: "Achievements",
     },
   },
   {
