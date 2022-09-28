@@ -1,27 +1,42 @@
 <template>
   <section class="content-section p-6 my-10 mr-10 w-full md:w-auto">
     <h3 class="text-center md:text-left">Where you can find him</h3>
-    <div class="flex pt-6">
-      <div class="icon-bg flex justify-center items-center mr-6">
-        <font-awesome-icon class="icon" icon="fa-solid fa-location-dot" />
+    <div class="flex items-center pt-6">
+      <div
+        class="icon-bg w-10 h-10 md:w-14 md:h-14 flex justify-center items-center mr-4 md:mr-6"
+      >
+        <font-awesome-icon
+          class="icon text-2xl md:text-3xl"
+          icon="fa-solid fa-location-dot"
+        />
       </div>
       <div class="flex flex-col justify-center">
         <p>Location</p>
         <p class="font-bold">Bideford, UK</p>
       </div>
     </div>
-    <div class="flex pt-6">
-      <div class="icon-bg flex justify-center items-center mr-6">
-        <font-awesome-icon class="icon" icon="fa-solid fa-envelope" />
+    <div class="flex items-center pt-6">
+      <div
+        class="icon-bg w-10 h-10 md:w-14 md:h-14 flex justify-center items-center mr-4 md:mr-6"
+      >
+        <font-awesome-icon
+          class="icon text-2xl md:text-3xl"
+          icon="fa-solid fa-envelope"
+        />
       </div>
       <div class="flex flex-col justify-center">
         <p>Email</p>
         <p class="font-bold">sergiosdcorreia@gmail.com</p>
       </div>
     </div>
-    <div class="flex pt-6">
-      <div class="icon-bg flex justify-center items-center mr-6">
-        <font-awesome-icon class="icon" icon="fa-solid fa-phone" />
+    <div class="flex items-center pt-6">
+      <div
+        class="icon-bg w-10 h-10 md:w-14 md:h-14 flex justify-center items-center mr-4 md:mr-6"
+      >
+        <font-awesome-icon
+          class="icon text-2xl md:text-3xl"
+          icon="fa-solid fa-phone"
+        />
       </div>
       <div class="flex flex-col justify-center">
         <p>Phone</p>
@@ -52,14 +67,11 @@ p {
   color: var(--light-grey);
 }
 .icon-bg {
-  width: 54px;
-  height: 54px;
   border-radius: 50%;
   background-color: var(--primary);
 
   .icon {
     color: var(--light-grey);
-    font-size: 30px;
   }
 }
 </style>
