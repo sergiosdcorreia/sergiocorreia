@@ -2,8 +2,11 @@
   <div class="content-section w-full md:w-50 p-6 mt-10 md:mr-10">
     <div v-if="content.logo">
       <img class="w-16 mb-3" :src="content.logo" />
+      <h3 class="text-left">{{ content.title }}</h3>
     </div>
-    <h3 class="text-center md:text-left">{{ content.title }}</h3>
+    <div v-else>
+      <h3 class="text-center md:text-left">{{ content.title }}</h3>
+    </div>
     <div class="flex flex-col xl:flex-row">
       <p class="py-4 mr-0 md:mr-10">
         {{ content.text }}
