@@ -88,10 +88,10 @@
     >
       <div>
         <Info />
-        <section class="content-section flex justify-around p-6 mt-10">
+        <section class="content-section flex justify-around p-6 mt-10 md:mb-10">
           <div class="flex flex-col">
-            <h3 class="text-center md:text-left">His skillset</h3>
-            <div v-if="skills.length" class="flex flex-col md:flex-row">
+            <h3 class="text-center md:text-left">His development skills</h3>
+            <div v-if="skills.length" class="flex flex-col lg:flex-row">
               <template v-for="skill in skills" :key="skill.skillName">
                 <AnimatedSkill :skills="skill" />
               </template>
