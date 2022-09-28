@@ -47,7 +47,11 @@
             help!
           </p>
           <div class="flex flex-col md:flex-row">
-            <button class="btn-primary mt-6 font-bold">Hire him!</button>
+            <a
+              href="mailto: sergiosdcorreia@gmail.com"
+              class="btn-primary text-center inline-block mt-6 font-bold"
+              >Hire him!</a
+            >
             <a
               href="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/files%2FCV_SergioCorreia_2022.pdf?alt=media&token=fea6db60-fb72-4290-b780-316393ad52a7"
               class="btn-secondary text-center inline-block md:ml-4 mt-6 font-bold"
