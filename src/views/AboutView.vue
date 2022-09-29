@@ -1,6 +1,8 @@
 <template>
   <div class="container mx-auto py-10 px-4">
-    <h1 class="title text-2xl md:text-6xl font-bold select-none">about</h1>
+    <h1 class="title text-2xl md:text-6xl font-bold select-none">
+      his background
+    </h1>
     <transition
       name="content"
       tag="section"

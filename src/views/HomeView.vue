@@ -35,22 +35,21 @@
             He loves development and design
           </h3>
           <p class="pt-4">
-            Being passionate about Technology and Design, he finds himself
-            constantly exploring and learning about new technologies and new
-            trends in the field of
+            Being a developer for around 5 years now, he developed features, web
+            apps and 3D features with a keen eye to detail that helped the
+            companies to stand out and improve their business. Being passionate
+            about Technology and Design, he finds himself constantly exploring
+            and learning about new technologies and new trends in the field of
             <span class="font-bold">Web Development</span> and
             <span class="font-bold">Web Design</span>. If you need someone who
-            can quickly prototype and develop with
-            <span class="font-bold">HTML</span>,
-            <span class="font-bold">CSS</span> and
-            <span class="font-bold">JavaScript (Vue.js)</span> he's happy to
-            help!
+            can make a difference and develop with
+            <span class="font-bold">Vue.js</span> he's happy to help!
           </p>
           <div class="flex flex-col md:flex-row">
             <a
               href="mailto: sergiosdcorreia@gmail.com"
               class="btn-primary text-center inline-block mt-6 font-bold"
-              >Hire him!</a
+              >Let's talk!</a
             >
             <a
               href="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/files%2FCV_SergioCorreia_2022.pdf?alt=media&token=fea6db60-fb72-4290-b780-316393ad52a7"
