@@ -31,10 +31,14 @@
 <script>
 import { ref, computed } from "vue";
 import GalleryList from "@/components/GalleryList.vue";
-import UploadForm from "@/components/UploadForm.vue";
-import Modal from "@/components/Modal.vue";
 import { useCollection } from "@/composables/useCollection";
 import { useStore } from "vuex";
+
+const UploadForm = () =>
+  import(/* webpackChunkName: "UploadForm" */ "@/components/UploadForm.vue");
+
+const Modal = () =>
+  import(/* webpackChunkName: "Modal" */ "@/components/Modal.vue");
 
 export default {
   name: "PhotoGallery",

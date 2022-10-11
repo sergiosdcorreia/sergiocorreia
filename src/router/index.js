@@ -1,10 +1,6 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import HomeView from "@/views/HomeView.vue";
-import Achievements from "@/views/Achievements.vue";
-import PhotoGallery from "@/views/PhotoGallery.vue";
-import ArtGallery from "@/views/ArtGallery.vue";
-import Login from "@/views/Login.vue";
 
 const routes = [
   {
@@ -18,41 +14,35 @@ const routes = [
   {
     path: "/achievements",
     name: "achievements",
-    component: Achievements,
     meta: {
       title: "Achievements",
     },
+    component: () =>
+      import(/* webpackChunkName: "achievements" */ "@/views/Achievements.vue"),
   },
   {
     path: "/photo-gallery",
     name: "photogallery",
-    component: PhotoGallery,
     meta: {
       title: "Photo Gallery",
     },
+    component: () =>
+      import(
+        /* webpackChunkName: "photo-gallery" */ "@/views/PhotoGallery.vue"
+      ),
   },
   {
     path: "/art-gallery",
     name: "artgallery",
-    component: ArtGallery,
     meta: {
       title: "Art Gallery",
     },
-  },
-  {
-    path: "/login",
-    name: "login",
-    component: Login,
-    meta: {
-      title: "Login",
-    },
+    component: () =>
+      import(/* webpackChunkName: "art-gallery" */ "@/views/ArtGallery.vue"),
   },
   {
     path: "/about",
     name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     meta: {
       title: "About",
     },
