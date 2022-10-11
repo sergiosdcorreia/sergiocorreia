@@ -6,7 +6,7 @@
       appear
       class="flex flex-col-reverse justify-start md:flex-row md:justify-between md:items-center"
     >
-      <div>
+      <section>
         <div>
           <h1 class="main-title font-bold text-5xl md:text-7xl select-none">
             sérgio correia
@@ -20,7 +20,7 @@
         >
           <img class="w-20 md:w-36" src="@/assets/images/SergioFoto200.png" />
         </div>
-      </div>
+      </section>
     </transition>
     <transition
       v-if="visible"
@@ -29,7 +29,7 @@
       appear
       class="flex flex-col md:flex-row"
     >
-      <div>
+      <section>
         <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
           <h3 class="text-center md:text-left">
             He loves development and design
@@ -67,7 +67,7 @@
           </div>
         </div>
         <ExperienceSection />
-      </div>
+      </section>
     </transition>
     <transition
       v-if="visible"
@@ -76,45 +76,33 @@
       appear
       class="flex flex-col-reverse md:flex-row"
     >
-      <div>
+      <section>
         <Info />
-        <section class="content-section flex justify-around p-6 mt-10 md:mb-10">
-          <div class="flex flex-col">
-            <h3 class="text-center md:text-left">His development skills</h3>
-            <div v-if="skills.length" class="flex flex-col lg:flex-row">
-              <template v-for="skill in skills" :key="skill.skillName">
-                <AnimatedSkill :skills="skill" />
-              </template>
-            </div>
-          </div>
-        </section>
-      </div>
+        <SkillsSection />
+      </section>
     </transition>
   </div>
 </template>
 
 <script>
 import { ref, onMounted } from "vue";
-import AnimatedSkill from "@/components/AnimatedSkill.vue";
 import Info from "@/components/Info.vue";
 import ExperienceSection from "@/components/ExperienceSection.vue";
-import { getSkills } from "@/composables/data.js";
+import SkillsSection from "@/components/SkillsSection.vue";
 
 export default {
   name: "HomeView",
-  components: { AnimatedSkill, Info, ExperienceSection },
+  components: { SkillsSection, Info, ExperienceSection },
   setup() {
     let visible = ref(false);
-    const { skills } = getSkills();
 
     function delayElements() {
       setTimeout(() => {
         visible.value = true;
       }, 1000);
     }
-
     onMounted(delayElements);
-    return { skills, visible };
+    return { visible };
   },
 };
 </script>
