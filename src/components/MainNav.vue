@@ -35,7 +35,7 @@
 
 <script>
 import MainNavLink from "@/components/MainNavLink.vue";
-import { collapsed, toggleSidebar, sidebarWidth } from "@/composables/state";
+import { collapsed, toggleSidebar, sidebarWidth } from "@/composables/useState";
 import { computed, onMounted } from "vue";
 import { useStore } from "vuex";
 import { useRouter } from "vue-router";

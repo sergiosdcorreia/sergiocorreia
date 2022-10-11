@@ -7,7 +7,7 @@
 
 <script>
 import MainNav from "@/components/MainNav.vue";
-import { sidebarWidth } from "@/composables/state";
+import { sidebarWidth } from "@/composables/useState";
 
 export default {
   name: "App",

@@ -66,16 +66,7 @@
             </a>
           </div>
         </div>
-        <div class="content-section p-6 mt-10">
-          <h3 class="text-center md:text-left">
-            Around 5 years of development experience
-          </h3>
-          <div v-if="workExperience.length">
-            <template v-for="work in workExperience" :key="work.company">
-              <WorkExperience :work-experience="work" />
-            </template>
-          </div>
-        </div>
+        <ExperienceSection />
       </div>
     </transition>
     <transition
@@ -106,16 +97,15 @@
 import { ref, onMounted } from "vue";
 import AnimatedSkill from "@/components/AnimatedSkill.vue";
 import Info from "@/components/Info.vue";
-import WorkExperience from "@/components/WorkExperience.vue";
-import { getSkills, getWorkExperience } from "@/composables/data.js";
+import ExperienceSection from "@/components/ExperienceSection.vue";
+import { getSkills } from "@/composables/data.js";
 
 export default {
   name: "HomeView",
-  components: { AnimatedSkill, Info, WorkExperience },
+  components: { AnimatedSkill, Info, ExperienceSection },
   setup() {
     let visible = ref(false);
     const { skills } = getSkills();
-    const { workExperience } = getWorkExperience();
 
     function delayElements() {
       setTimeout(() => {
@@ -124,7 +114,7 @@ export default {
     }
 
     onMounted(delayElements);
-    return { skills, workExperience, visible };
+    return { skills, visible };
   },
 };
 </script>

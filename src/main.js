@@ -6,6 +6,7 @@ import router from "@/router";
 import store from "@/store";
 import YouTube from "vue3-youtube";
 import vueVimeoPlayer from "vue-vimeo-player";
+import WorkExperience from "@/components/WorkExperience.vue";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import {
@@ -45,6 +46,7 @@ library.add(
 createApp(App)
   .component("font-awesome-icon", FontAwesomeIcon)
   .component("YouTube", YouTube)
+  .component("WorkExperience", WorkExperience)
   .use(vueVimeoPlayer)
   .use(store)
   .use(router)

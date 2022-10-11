@@ -12,7 +12,7 @@
 <script>
 import { computed } from "vue";
 import { useRoute } from "vue-router";
-import { collapsed } from "@/composables/state";
+import { collapsed } from "@/composables/useState";
 
 export default {
   props: {
