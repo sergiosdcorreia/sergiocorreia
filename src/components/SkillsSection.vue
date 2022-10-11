@@ -25,4 +25,11 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+h3 {
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--light-grey);
+}
+</style>
