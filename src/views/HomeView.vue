@@ -4,14 +4,18 @@
       tag="section"
       name="heading"
       appear
-      class="flex flex-col-reverse justify-start md:flex-row md:justify-between md:items-center"
+      class="flex flex-col-reverse justify-start md:flex-row md:justify-between items-center"
     >
       <section>
         <div>
-          <h1 class="main-title font-bold text-5xl md:text-7xl select-none">
+          <h1
+            class="main-title font-bold text-center md:text-left text-5xl md:text-7xl select-none"
+          >
             sérgio correia
           </h1>
-          <h2 class="subtitle font-bold text-2xl md:text-2xl mt-1 select-none">
+          <h2
+            class="subtitle font-bold text-center md:text-left text-2xl md:text-2xl mt-1 select-none"
+          >
             frontend web developer
           </h2>
         </div>
@@ -189,6 +193,7 @@ p {
 .content-section {
   background-color: var(--darker-grey);
   border-radius: 16px;
+  flex-grow: 1;
 }
 
 .w-50 {
