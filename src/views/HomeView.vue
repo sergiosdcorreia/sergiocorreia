@@ -39,15 +39,15 @@
             He loves development and design
           </h3>
           <p class="pt-4">
-            Being a developer for around 5 years now, he developed features, web
-            apps and 3D features with a keen eye to detail that helped the
-            companies to stand out and improve their business. Being passionate
-            about Technology and Design, he finds himself constantly exploring
-            and learning about new technologies and new trends in the field of
-            <span class="font-bold">Web Development</span> and
-            <span class="font-bold">Web Design</span>. If you need someone who
-            can make a difference and develop with
-            <span class="font-bold">Vue.js</span> he's happy to help!
+            Highly skilled Web Developer with over 5 years of experience
+            specializing in <span class="font-bold">Vue.js</span> and a strong
+            background in <span class="font-bold">UI/UX Design</span>.
+            Proficient in <span class="font-bold">Figma</span> and other design
+            tools, he has a keen eye for creating visually appealing, intuitive,
+            and responsive user experiences. With a proven track record in
+            developing seamless web applications, he's eager to apply his
+            technical expertise and design sensibilities to create innovative
+            solutions for clients.
           </p>
           <div class="flex flex-col md:flex-row">
             <a
