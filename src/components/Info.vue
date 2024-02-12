@@ -12,7 +12,7 @@
       </div>
       <div class="flex flex-col justify-center">
         <p>Location</p>
-        <p class="font-bold">Crediton, UK</p>
+        <p class="font-bold">Exeter, UK</p>
       </div>
     </div>
     <div class="flex items-center pt-6">
