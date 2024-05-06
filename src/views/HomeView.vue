@@ -16,7 +16,7 @@
           <h2
             class="subtitle font-bold text-center md:text-left text-2xl md:text-2xl mt-1 select-none"
           >
-            frontend web developer
+            creative fullstack developer
           </h2>
         </div>
         <div
@@ -35,17 +35,15 @@
     >
       <section>
         <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
-          <h3 class="text-center md:text-left">
-            He loves development and design
-          </h3>
+          <h3 class="text-center md:text-left">He loves coding and design</h3>
           <p class="pt-4">
-            Highly skilled Web Developer with over 5 years of experience, 3
-            years specialising in <span class="font-bold">Vue.js</span> and a
-            strong background in <span class="font-bold">Design</span>.
-            Proficient in <span class="font-bold">Figma</span> and other design
-            tools, he has a keen eye for creating visually appealing, intuitive,
-            and <span class="font-bold">responsive</span> user experiences. With
-            a proven track record in developing seamless
+            Creative Developer with over 5 years of experience specialising in
+            <span class="font-bold">JavaScript</span> and a strong background in
+            <span class="font-bold">Design</span>. Proficient in
+            <span class="font-bold">Figma</span> and other design tools, he has
+            a keen eye for creating visually appealing, intuitive, and
+            <span class="font-bold">responsive</span> user experiences. With a
+            proven track record in developing seamless
             <span class="font-bold">web applications</span>, he's eager to apply
             his technical expertise and design sensibilities to create
             <span class="font-bold">innovative solutions</span> for clients.
