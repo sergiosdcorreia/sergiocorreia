@@ -55,7 +55,7 @@
               >Let's talk!</a
             >
             <a
-              href="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/files%2FCV_SergioCorreia_2022.pdf?alt=media&token=fea6db60-fb72-4290-b780-316393ad52a7"
+              href="https://firebasestorage.googleapis.com/v0/b/sergiocorreia-7fcac.appspot.com/o/files%2FCV_SergioCorreia_24_05.pdf?alt=media&token=ef15c727-d95c-447a-8489-111a662882e1"
               class="btn-secondary text-center inline-block md:ml-4 mt-6 font-bold"
               target="blank"
             >
