@@ -16,7 +16,7 @@
           <h2
             class="subtitle font-bold text-center md:text-left text-2xl md:text-2xl mt-1 select-none"
           >
-            creative fullstack developer
+            creative frontend developer
           </h2>
         </div>
         <div
