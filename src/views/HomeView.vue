@@ -35,9 +35,12 @@
     >
       <section>
         <div class="content-section w-full md:w-50 p-6 mt-10 mr-10">
-          <h3 class="text-center md:text-left">He loves coding and design</h3>
+          <h3 class="text-center md:text-left">
+            He loves web development and design
+          </h3>
           <p class="pt-4">
-            Creative Developer with over 5 years of experience specialising in
+            He's a Creative Developer with over 5 years of experience
+            specialising in
             <span class="font-bold">JavaScript</span> and a strong background in
             <span class="font-bold">Design</span>. Proficient in
             <span class="font-bold">Figma</span> and other design tools, he has
