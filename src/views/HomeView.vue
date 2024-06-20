@@ -39,8 +39,7 @@
             He loves web development and design
           </h3>
           <p class="pt-4">
-            He's a Creative Developer with around 7 years of experience
-            specialising in
+            He's a Creative Developer with 7 years of experience specialising in
             <span class="font-bold">JavaScript</span> and a strong background in
             <span class="font-bold">Design</span>. Proficient in
             <span class="font-bold">Figma</span> and other design tools, he has
