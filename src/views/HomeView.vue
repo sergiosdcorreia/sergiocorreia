@@ -67,8 +67,16 @@
             <a
               href="https://github.com/sergiosdcorreia"
               class="btn-secondary text-center inline-block md:ml-4 mt-6 font-bold"
+              target="blank"
             >
               GitHub Repository
+            </a>
+            <a
+              href="https://www.behance.net/SergioCorreiaDesign"
+              class="btn-secondary text-center inline-block md:ml-4 mt-6 font-bold"
+              target="blank"
+            >
+              Design Portfolio
             </a>
           </div>
         </div>
