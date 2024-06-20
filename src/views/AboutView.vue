@@ -31,7 +31,7 @@
             >here</a
           >.
         </p>
-        <p class="text-xs pt-4">© Sérgio Correia 2022</p>
+        <p class="text-xs pt-4">© Sérgio Correia 2024</p>
       </div>
     </div>
   </div>
