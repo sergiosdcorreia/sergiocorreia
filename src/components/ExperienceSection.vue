@@ -1,8 +1,6 @@
 <template>
   <div class="content-section p-6 mt-10">
-    <h3 class="text-center md:text-left">
-      Around 7 years of development experience
-    </h3>
+    <h3 class="text-center md:text-left">7 years of development experience</h3>
     <div v-if="documents.length">
       <template v-for="work in documents" :key="work.company">
         <WorkExperience :work-experience="work" />
