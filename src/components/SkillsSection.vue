@@ -1,7 +1,7 @@
 <template>
   <div class="content-section flex justify-around p-6 mt-10 md:mb-10">
     <div class="flex flex-col">
-      <h3 class="text-center md:text-left">His development skills</h3>
+      <h3 class="text-center md:text-left">His skills</h3>
       <div v-if="documents.length" class="flex flex-col lg:flex-row">
         <template v-for="skill in documents" :key="skill.skillName">
           <AnimatedSkill :skills="skill" />
