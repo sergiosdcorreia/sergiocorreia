@@ -77,6 +77,13 @@
             >
               Design Portfolio
             </a>
+            <a
+              href="https://www.linkedin.com/in/sergiocorreiadeveloper/"
+              class="btn-secondary text-center inline-block md:ml-4 mt-6 font-bold"
+              target="blank"
+            >
+              LinkedIn Profile
+            </a>
           </div>
         </div>
         <ExperienceSection />
@@ -188,14 +195,14 @@ p {
 }
 
 .btn-secondary {
-  background-color: var(--light-grey);
   padding: 0.5em 1em;
   color: var(--primary);
   border-radius: 35px;
+  border: 1px solid var(--primary);
 
   &:hover {
-    background-color: var(--primary);
     color: var(--light-grey);
+    border: 1px solid var(--light-grey);
   }
 }
 
